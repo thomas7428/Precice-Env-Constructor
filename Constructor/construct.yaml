@@ -1,0 +1,35 @@
+name: precice_env  # Name of the Conda environment
+company: ArianeGroup  # Company name
+version: 1.0.0  # Version of the environment
+
+channels:
+  - https://conda.anaconda.org/conda-forge
+  - defaults
+
+conda_default_channels:
+  - https://conda.anaconda.org/conda-forge
+
+write_condarc: true  # Write the conda configuration file
+
+default_prefix: $HOME/miniconda3/envs/precice_env  # Default prefix for the environment
+
+progress_notifications: true  # Enable progress notifications during installation
+
+# System dependencies and other general specifications
+specs:
+  - precice    # precice package from conda-forge
+  - pyprecice        # pyprecice package
+  - fenics-dolfinx  # FEniCS DOLFINX
+  - openfoam     # OpenFOAM
+  - calculix     # Calculix
+  - paraview     # ParaView
+  - compilers # Compilers
+  - cmake       # CMake
+
+# Virtual specifications (for architecture, specific versions, etc.)
+virtual_specs:
+  - __archspec=1  # Specific architecture (here, IceLake)
+  - __glibc>=2.31         # Specific glibc version
+  - __unix=0            # Specification for Unix environment
+
+installer_filename: "precice_env_installer.sh"
