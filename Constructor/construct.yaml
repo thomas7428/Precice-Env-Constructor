@@ -17,6 +17,14 @@ progress_notifications: true  # Enable progress notifications during installatio
 
 # System dependencies and other general specifications
 specs:
+  - anaconda # Miniconda installation
+  - python # Python
+  - pip    # pip package manager
+  - numpy  # NumPy
+  - scipy  # SciPy
+  - matplotlib # Matplotlib
+  - pandas # Pandas
+  - jupyterlab # JupyterLab
   - precice    # precice package from conda-forge
   - pyprecice        # pyprecice package
   - fenics-dolfinx  # FEniCS DOLFINX
