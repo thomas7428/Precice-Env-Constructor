@@ -1,0 +1,25 @@
+{
+  "build": "pyh29332c3_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "tinycss >=1.1.0,<1.5"
+  ],
+  "depends": [
+    "python",
+    "webencodings",
+    "python >=3.9"
+  ],
+  "fn": "bleach-6.2.0-pyh29332c3_4.conda",
+  "license": "Apache-2.0 AND MIT",
+  "md5": "f0b4c8e370446ef89797608d60a564b3",
+  "name": "bleach",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "a05971bb80cca50ce9977aad3f7fc053e54ea7d5321523efc7b9a6e12901d3cd",
+  "size": 141405,
+  "subdir": "noarch",
+  "timestamp": 1737382993000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/bleach-6.2.0-pyh29332c3_4.conda",
+  "version": "6.2.0"
+}

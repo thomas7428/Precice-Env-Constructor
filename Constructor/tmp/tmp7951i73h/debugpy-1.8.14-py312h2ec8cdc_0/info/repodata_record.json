@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "py312h2ec8cdc_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "python_abi 3.12.* *_cp312",
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "debugpy-1.8.14-py312h2ec8cdc_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "089cf3a3becf0e2f403feaf16e921678",
+  "name": "debugpy",
+  "platform": "linux",
+  "sha256": "8f0b338687f79ea87324f067bedddd2168f07b8eec234f0fe63b522344c6a919",
+  "size": 2630748,
+  "subdir": "linux-64",
+  "timestamp": 1744321406000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/debugpy-1.8.14-py312h2ec8cdc_0.conda",
+  "version": "1.8.14"
+}

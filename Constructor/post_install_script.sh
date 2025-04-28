@@ -1,0 +1,75 @@
+# Script intented to be run after the installation of the package
+mkdir ~/src/
+
+#Installing Calculix adapter
+cd ~
+wget http://www.dhondt.de/ccx_2.20.src.tar.bz2
+tar xvjf ccx_2.20.src.tar.bz2
+cd ~/src/
+wget https://github.com/precice/calculix-adapter/archive/refs/tags/v2.20.1.tar.gz
+tar -xzf v2.20.1.tar.gz
+cd calculix-adapter-2.20.1
+# We need to adapt to the conda installation
+sed -i 's|^SPOOLES_INCLUDE.*|SPOOLES_INCLUDE   = -I$(CONDA_PREFIX)/include/spooles|' Makefile
+sed -i 's|^SPOOLES_LIBS.*|SPOOLES_LIBS      = -L$(CONDA_PREFIX)/lib -l:spoolesMT.a -l:spooles.a|' Makefile
+sed -i 's|^ARPACK_INCLUDE.*|ARPACK_INCLUDE    = -I$(CONDA_PREFIX)/include/arpack|' Makefile
+sed -i 's|^ARPACK_LIBS.*|ARPACK_LIBS       = -L$(CONDA_PREFIX)/lib -larpack -llapack -lblas|' Makefile
+sed -i 's|^YAML_INCLUDE.*|YAML_INCLUDE      = -I$(CONDA_PREFIX)/include/yaml-cpp|' Makefile
+sed -i 's|^YAML_LIBS.*|YAML_LIBS         = -L$(CONDA_PREFIX)/lib -lyaml-cpp|' Makefile
+# We need to adapt the compiler flags because of the recent GCC we use (>= 10)
+sed -i '/^FFLAGS =/s|$| -fallow-argument-mismatch|' Makefile
+
+bash make clean
+bash make
+# Put the compiled bin inside the environment
+cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
+# Test it via the version command
+bash ccx_preCICE --version
+
+#Installing dolfinx adapter 
+#cd ~/src/
+#git clone https://github.com/precice/fenicsx-adapter.git
+#cd fenicsx-adapter
+#pip3 install --user .
+# We need to downgrade mpi4py to a pre 4.0 version
+#conda install -c conda-forge mpi4py=3.1.6
+# Testing the installation
+#cd ~/src/fenicsx-adapter/tutorials/partitioned-heat-conduction/dirichlet-fenicsx
+#bash ./run.sh
+
+# Installing OpenFOAM adapter
+mkdir ~/src/
+cd ~/src/
+git clone https://github.com/precice/openfoam-adapter.git
+cd openfoam-adapter
+# Verify that it is the master branch and v1.3.1 tag
+git checkout master
+git checkout v1.3.1
+
+# Adapt for the conda installation
+sed -i '/^EXE_INC.*/a \
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/interfaceProperties/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/interfaceProperties/ \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/twoPhaseMixture/lnInclude/ \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressible/lnInclude/ \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressibleTwoPhaseMixture/lnInclude/ \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/immiscibleIncompressibleTwoPhaseMixture/lnInclude/ \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/ \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressible/transportModel \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/incompressible/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/compressible/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/thermophysicalModels/basic/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/turbulenceModels/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/compressible/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/meshTools/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/finiteVolume/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OSspecific/POSIX/lnInclude \\
+    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OpenFOAM/lnInclude \\' Make/options
+bash ./Allwmake
+
+# Test the installation of openFOAM
+cd ~/src/
+wget https://github.com/precice/tutorials/archive/refs/tags/v202404.0.tar.gz
+tar -xzf v202404.0.tar.gz
+cd tutorials-202404.0/quickstart/fluide-openfoam
+bash ./run.sh

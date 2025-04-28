@@ -1,0 +1,21 @@
+{
+  "build": "pyhd8ed1ab_1004",
+  "build_number": 1004,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "fn": "pickleshare-0.7.5-pyhd8ed1ab_1004.conda",
+  "license": "MIT",
+  "md5": "11a9d1d09a3615fc07c3faf79bc0b943",
+  "name": "pickleshare",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "e2ac3d66c367dada209fc6da43e645672364b9fd5f9d28b9f016e24b81af475b",
+  "size": 11748,
+  "subdir": "noarch",
+  "timestamp": 1733327448000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pickleshare-0.7.5-pyhd8ed1ab_1004.conda",
+  "version": "0.7.5"
+}

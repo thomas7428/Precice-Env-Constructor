@@ -1,0 +1,30 @@
+{
+  "arch": "x86_64",
+  "build": "hd9ff511_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "libzlib >=1.3.1,<2.0a0",
+    "lerc >=4.0.0,<5.0a0",
+    "zstd >=1.5.7,<1.6.0a0",
+    "libwebp-base >=1.5.0,<2.0a0",
+    "liblzma >=5.8.1,<6.0a0",
+    "libdeflate >=1.23,<1.24.0a0",
+    "libjpeg-turbo >=3.1.0,<4.0a0"
+  ],
+  "fn": "libtiff-4.7.0-hd9ff511_4.conda",
+  "license": "HPND",
+  "md5": "6c1028898cf3a2032d9af46689e1b81a",
+  "name": "libtiff",
+  "platform": "linux",
+  "sha256": "7480613af15795281bd338a4d3d2ca148f9c2ecafc967b9cc233e78ba2fe4a6d",
+  "size": 429381,
+  "subdir": "linux-64",
+  "timestamp": 1745372713000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libtiff-4.7.0-hd9ff511_4.conda",
+  "version": "4.7.0"
+}

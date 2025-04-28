@@ -1,0 +1,21 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "fn": "ptyprocess-0.7.0-pyhd8ed1ab_1.conda",
+  "license": "ISC",
+  "md5": "7d9daffbb8d8e0af0f769dbbcd173a54",
+  "name": "ptyprocess",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "a7713dfe30faf17508ec359e0bc7e0983f5d94682492469bd462cdaae9c64d83",
+  "size": 19457,
+  "subdir": "noarch",
+  "timestamp": 1733302371000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/ptyprocess-0.7.0-pyhd8ed1ab_1.conda",
+  "version": "0.7.0"
+}

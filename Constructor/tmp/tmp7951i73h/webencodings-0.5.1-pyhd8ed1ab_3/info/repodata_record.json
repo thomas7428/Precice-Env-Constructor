@@ -1,0 +1,21 @@
+{
+  "build": "pyhd8ed1ab_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "fn": "webencodings-0.5.1-pyhd8ed1ab_3.conda",
+  "license": "BSD-3-Clause",
+  "md5": "2841eb5bfc75ce15e9a0054b98dcd64d",
+  "name": "webencodings",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "19ff205e138bb056a46f9e3839935a2e60bd1cf01c8241a5e172a422fed4f9c6",
+  "size": 15496,
+  "subdir": "noarch",
+  "timestamp": 1733236131000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/webencodings-0.5.1-pyhd8ed1ab_3.conda",
+  "version": "0.5.1"
+}

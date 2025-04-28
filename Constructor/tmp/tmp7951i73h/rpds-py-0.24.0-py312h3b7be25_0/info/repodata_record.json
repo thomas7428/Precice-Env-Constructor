@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "py312h3b7be25_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "__glibc >=2.17"
+  ],
+  "depends": [
+    "python",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "python_abi 3.12.* *_cp312"
+  ],
+  "fn": "rpds-py-0.24.0-py312h3b7be25_0.conda",
+  "license": "MIT",
+  "md5": "5f5c19cbbd3526fad9c8ca0cca3e7346",
+  "name": "rpds-py",
+  "platform": "linux",
+  "sha256": "10dad6a9d40e7c1856cb1f5f941ea06500610e13ee6ec4961fba59fccbaa0dc9",
+  "size": 394023,
+  "subdir": "linux-64",
+  "timestamp": 1743037659000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/rpds-py-0.24.0-py312h3b7be25_0.conda",
+  "version": "0.24.0"
+}

@@ -1,0 +1,22 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "fn": "parso-0.8.4-pyhd8ed1ab_1.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "5c092057b6badd30f75b06244ecd01c9",
+  "name": "parso",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "17131120c10401a99205fc6fe436e7903c0fa092f1b3e80452927ab377239bcc",
+  "size": 75295,
+  "subdir": "noarch",
+  "timestamp": 1733271352000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/parso-0.8.4-pyhd8ed1ab_1.conda",
+  "version": "0.8.4"
+}

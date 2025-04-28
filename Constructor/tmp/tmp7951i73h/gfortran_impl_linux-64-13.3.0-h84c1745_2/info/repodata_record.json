@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h84c1745_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "gcc_impl_linux-64 >=13.3.0",
+    "libgcc >=13.3.0",
+    "libgfortran5 >=13.3.0",
+    "libstdcxx >=13.3.0",
+    "sysroot_linux-64"
+  ],
+  "fn": "gfortran_impl_linux-64-13.3.0-h84c1745_2.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "4e21ed177b76537067736f20f54fee0a",
+  "name": "gfortran_impl_linux-64",
+  "platform": "linux",
+  "sha256": "03a45f58b41909d4189fb81ec7f971b60aaccf95a3953049d93ae7d06eb19000",
+  "size": 15923784,
+  "subdir": "linux-64",
+  "timestamp": 1740240635000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/gfortran_impl_linux-64-13.3.0-h84c1745_2.conda",
+  "version": "13.3.0"
+}

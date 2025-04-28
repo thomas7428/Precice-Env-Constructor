@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "hf45584d_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libnl >=3.11.0,<4.0a0",
+    "rdma-core >=57.0"
+  ],
+  "fn": "libfabric1-2.1.0-hf45584d_1.conda",
+  "license": "BSD-2-Clause OR GPL-2.0-only",
+  "license_family": "BSD",
+  "md5": "8530ead81bc02442ce5fe2c07deb85ea",
+  "name": "libfabric1",
+  "platform": "linux",
+  "sha256": "58e16e12e254454582044ca3109afad814fc6419ed4475a2bb5244fffd4728c2",
+  "size": 673866,
+  "subdir": "linux-64",
+  "timestamp": 1745592772000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libfabric1-2.1.0-hf45584d_1.conda",
+  "version": "2.1.0"
+}

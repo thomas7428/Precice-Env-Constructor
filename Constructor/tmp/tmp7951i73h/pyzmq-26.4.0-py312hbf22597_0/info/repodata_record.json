@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "py312hbf22597_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "python_abi 3.12.* *_cp312",
+    "python >=3.12,<3.13.0a0",
+    "zeromq >=4.3.5,<4.4.0a0",
+    "libsodium >=1.0.20,<1.0.21.0a0"
+  ],
+  "fn": "pyzmq-26.4.0-py312hbf22597_0.conda",
+  "license": "BSD-3-Clause",
+  "md5": "fa0ab7d5bee9efbc370e71bcb5da9856",
+  "name": "pyzmq",
+  "platform": "linux",
+  "sha256": "65a264837f189b0c69c5431ea8ef44e405c472fedba145b05055f284f08bc663",
+  "size": 379554,
+  "subdir": "linux-64",
+  "timestamp": 1743831426000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/pyzmq-26.4.0-py312hbf22597_0.conda",
+  "version": "26.4.0"
+}

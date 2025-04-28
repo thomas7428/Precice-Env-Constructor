@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h4637d8d_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libzlib >=1.2.13,<2.0.0a0",
+    "krb5 >=1.21.1,<1.22.0a0"
+  ],
+  "fn": "libcups-2.3.3-h4637d8d_4.conda",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "d4529f4dff3057982a7617c7ac58fde3",
+  "name": "libcups",
+  "platform": "linux",
+  "sha256": "bc67b9b21078c99c6bd8595fe7e1ed6da1f721007726e717f0449de7032798c4",
+  "size": 4519402,
+  "subdir": "linux-64",
+  "timestamp": 1689195353000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libcups-2.3.3-h4637d8d_4.conda",
+  "version": "2.3.3"
+}

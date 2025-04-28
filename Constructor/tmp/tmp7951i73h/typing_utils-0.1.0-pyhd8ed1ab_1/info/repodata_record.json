@@ -1,0 +1,21 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "fn": "typing_utils-0.1.0-pyhd8ed1ab_1.conda",
+  "license": "Apache-2.0",
+  "md5": "f6d7aa696c67756a650e91e15e88223c",
+  "name": "typing_utils",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "3088d5d873411a56bf988eee774559335749aed6f6c28e07bf933256afb9eb6c",
+  "size": 15183,
+  "subdir": "noarch",
+  "timestamp": 1733331395000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/typing_utils-0.1.0-pyhd8ed1ab_1.conda",
+  "version": "0.1.0"
+}

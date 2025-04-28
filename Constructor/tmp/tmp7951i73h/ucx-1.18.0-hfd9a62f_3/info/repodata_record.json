@@ -1,0 +1,31 @@
+{
+  "arch": "x86_64",
+  "build": "hfd9a62f_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "cudatoolkit",
+    "cuda-version >=11.2,<12.0a0"
+  ],
+  "depends": [
+    "libgcc",
+    "libstdcxx",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "__glibc >=2.17,<3.0.a0",
+    "_openmp_mutex >=4.5",
+    "rdma-core >=55.0"
+  ],
+  "fn": "ucx-1.18.0-hfd9a62f_3.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "d4990f934812fab0a8cb432b596ab97d",
+  "name": "ucx",
+  "platform": "linux",
+  "sha256": "bf8db7d60a89249f234ade983628f946348168d0da410e179f77308e1feff49d",
+  "size": 7497858,
+  "subdir": "linux-64",
+  "timestamp": 1743622233000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/ucx-1.18.0-hfd9a62f_3.conda",
+  "version": "1.18.0"
+}

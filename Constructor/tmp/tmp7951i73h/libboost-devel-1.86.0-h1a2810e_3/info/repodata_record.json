@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "h1a2810e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "boost-cpp <0.0a0"
+  ],
+  "depends": [
+    "libboost 1.86.0 h6c02f8c_3",
+    "libboost-headers 1.86.0 ha770c72_3"
+  ],
+  "fn": "libboost-devel-1.86.0-h1a2810e_3.conda",
+  "license": "BSL-1.0",
+  "md5": "ffe09ce10ce1e03e1e762ab5bc006a35",
+  "name": "libboost-devel",
+  "platform": "linux",
+  "sha256": "1bbc13f4bed720af80e67e5df1e609f4efd801ae27d85107c36416de20ebb84c",
+  "size": 37554,
+  "subdir": "linux-64",
+  "timestamp": 1733502001000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libboost-devel-1.86.0-h1a2810e_3.conda",
+  "version": "1.86.0"
+}

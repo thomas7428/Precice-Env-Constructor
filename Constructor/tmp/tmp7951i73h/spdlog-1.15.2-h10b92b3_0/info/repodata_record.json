@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h10b92b3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "fmt >=11.1.4,<11.2.0a0"
+  ],
+  "fn": "spdlog-1.15.2-h10b92b3_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "e44f468c1b8db8fe3f38a12ee286e13c",
+  "name": "spdlog",
+  "platform": "linux",
+  "sha256": "496a8fbed1dd3f4bd2b2b955fedb1e172282de86a2b01d5fce834a0a08e9b254",
+  "size": 195121,
+  "subdir": "linux-64",
+  "timestamp": 1743348972000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/spdlog-1.15.2-h10b92b3_0.conda",
+  "version": "1.15.2"
+}

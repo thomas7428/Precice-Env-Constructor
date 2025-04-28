@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "hb9d3cd8_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13"
+  ],
+  "fn": "rhash-1.4.5-hb9d3cd8_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "9af0e7981755f09c81421946c4bcea04",
+  "name": "rhash",
+  "platform": "linux",
+  "sha256": "04677caac29ec64a5d41d0cca8dbec5f60fa166d5458ff5a4393e4dc08a4799e",
+  "size": 186921,
+  "subdir": "linux-64",
+  "timestamp": 1728886721000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/rhash-1.4.5-hb9d3cd8_0.conda",
+  "version": "1.4.5"
+}

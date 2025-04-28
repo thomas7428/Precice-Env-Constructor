@@ -1,7 +1,6 @@
 name: precice_env  # Name of the Conda environment
 company: ArianeGroup  # Company name
 version: 1.0.0  # Version of the environment
-
 channels:
   - https://conda.anaconda.org/conda-forge
   - defaults
@@ -15,24 +14,28 @@ default_prefix: $HOME/miniconda3/envs/precice_env  # Default prefix for the envi
 
 progress_notifications: true  # Enable progress notifications during installation
 
+pre_install: pre_install_script.sh  # Pre-installation script to run before environment creation
+
 # System dependencies and other general specifications
 specs:
-  - anaconda # Miniconda installation
   - python # Python
   - pip    # pip package manager
-  - numpy  # NumPy
-  - scipy  # SciPy
-  - matplotlib # Matplotlib
-  - pandas # Pandas
-  - jupyterlab # JupyterLab
   - precice    # precice package from conda-forge
   - pyprecice        # pyprecice package
-  - fenics-dolfinx  # FEniCS DOLFINX
+  - fenics-dolfin  # FEniCS DOLFINX
   - openfoam     # OpenFOAM
   - calculix     # Calculix
   - paraview     # ParaView
   - compilers # Compilers
   - cmake       # CMake
+  - make        # Make
+  - git         # Git
+  - nano         # Nano text editor
+  - mpi4py # MPI for Python compatible version for dolfinx
+  - spooles
+  - yaml-cpp
+  - arpack
+  - fenicsprecice
 
 # Virtual specifications (for architecture, specific versions, etc.)
 virtual_specs:
@@ -41,3 +44,5 @@ virtual_specs:
   - __unix=0            # Specification for Unix environment
 
 installer_filename: "precice_env_installer.sh"
+
+post_install: post_install_script.sh  # Post-installation script to run after environment creation

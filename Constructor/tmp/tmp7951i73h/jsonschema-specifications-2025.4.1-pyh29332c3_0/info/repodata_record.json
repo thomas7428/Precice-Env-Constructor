@@ -1,0 +1,23 @@
+{
+  "build": "pyh29332c3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.9",
+    "referencing >=0.31.0"
+  ],
+  "fn": "jsonschema-specifications-2025.4.1-pyh29332c3_0.conda",
+  "license": "MIT",
+  "md5": "41ff526b1083fde51fbdc93f29282e0e",
+  "name": "jsonschema-specifications",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "66fbad7480f163509deec8bd028cd3ea68e58022982c838683586829f63f3efa",
+  "size": 19168,
+  "subdir": "noarch",
+  "timestamp": 1745424244000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.4.1-pyh29332c3_0.conda",
+  "version": "2025.4.1"
+}

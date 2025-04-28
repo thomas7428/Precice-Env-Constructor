@@ -1,0 +1,22 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9",
+    "parso >=0.8.3,<0.9.0"
+  ],
+  "fn": "jedi-0.19.2-pyhd8ed1ab_1.conda",
+  "license": "Apache-2.0 AND MIT",
+  "md5": "a4f4c5dc9b80bc50e0d3dc4e6e8f1bd9",
+  "name": "jedi",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "92c4d217e2dc68983f724aa983cca5464dcb929c566627b26a2511159667dba8",
+  "size": 843646,
+  "subdir": "noarch",
+  "timestamp": 1733300981000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/jedi-0.19.2-pyhd8ed1ab_1.conda",
+  "version": "0.19.2"
+}

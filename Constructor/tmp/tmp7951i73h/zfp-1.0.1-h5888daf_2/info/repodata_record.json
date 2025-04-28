@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h5888daf_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "_openmp_mutex >=4.5"
+  ],
+  "fn": "zfp-1.0.1-h5888daf_2.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "e0409515c467b87176b070bff5d9442e",
+  "name": "zfp",
+  "platform": "linux",
+  "sha256": "0dfafc75c72f308c0200836f2b973766cdcb8741b1ab61e0b462a34dd6b6ad20",
+  "size": 279120,
+  "subdir": "linux-64",
+  "timestamp": 1726925529000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/zfp-1.0.1-h5888daf_2.conda",
+  "version": "1.0.1"
+}

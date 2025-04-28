@@ -1,0 +1,21 @@
+{
+  "build": "hc03c837_102",
+  "build_number": 102,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__unix"
+  ],
+  "fn": "libstdcxx-devel_linux-64-13.3.0-hc03c837_102.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "aa38de2738c5f4a72a880e3d31ffe8b4",
+  "name": "libstdcxx-devel_linux-64",
+  "noarch": "generic",
+  "package_type": "noarch_generic",
+  "sha256": "abc89056d4ca7debe938504b3b6d9ccc6d7a0f0b528fe3409230636a21e81002",
+  "size": 12873130,
+  "subdir": "noarch",
+  "timestamp": 1740240239000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/libstdcxx-devel_linux-64-13.3.0-hc03c837_102.conda",
+  "version": "13.3.0"
+}

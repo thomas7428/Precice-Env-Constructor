@@ -1,0 +1,24 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9",
+    "importlib-metadata >=4.8.3",
+    "jupyter_server >=1.1.2"
+  ],
+  "fn": "jupyter-lsp-2.2.5-pyhd8ed1ab_1.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "0b4c3908e5a38ea22ebb98ee5888c768",
+  "name": "jupyter-lsp",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "1565c8b1423a37fca00fe0ab2a17cd8992c2ecf23e7867a1c9f6f86a9831c196",
+  "size": 55221,
+  "subdir": "noarch",
+  "timestamp": 1733493006000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/jupyter-lsp-2.2.5-pyhd8ed1ab_1.conda",
+  "version": "2.2.5"
+}

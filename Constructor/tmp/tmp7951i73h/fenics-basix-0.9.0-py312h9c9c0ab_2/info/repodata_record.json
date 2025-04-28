@@ -1,0 +1,29 @@
+{
+  "arch": "x86_64",
+  "build": "py312h9c9c0ab_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "python_abi 3.12.* *_cp312",
+    "python >=3.12,<3.13.0a0",
+    "numpy >=1.21",
+    "fenics-basix-nanobind-abi 0.2.1.13",
+    "fenics-libbasix 0.9.0 h7cb7ce6_2"
+  ],
+  "fn": "fenics-basix-0.9.0-py312h9c9c0ab_2.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "5d19947d216a8c94f470812b4791e33d",
+  "name": "fenics-basix",
+  "platform": "linux",
+  "sha256": "cdc207f68f537ada245e12eebfa4596e2b1751eef275ce37fd7679ab6ea662d5",
+  "size": 200156,
+  "subdir": "linux-64",
+  "timestamp": 1730468419000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/fenics-basix-0.9.0-py312h9c9c0ab_2.conda",
+  "version": "0.9.0"
+}

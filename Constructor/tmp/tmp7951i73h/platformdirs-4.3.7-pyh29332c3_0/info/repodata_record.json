@@ -1,0 +1,22 @@
+{
+  "build": "pyh29332c3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.9"
+  ],
+  "fn": "platformdirs-4.3.7-pyh29332c3_0.conda",
+  "license": "MIT",
+  "md5": "e57da6fe54bb3a5556cf36d199ff07d8",
+  "name": "platformdirs",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "ae7d3e58224d53d6b59e1f5ac5809803bb1972f0ac4fb10cd9b8c87d4122d3e0",
+  "size": 23291,
+  "subdir": "noarch",
+  "timestamp": 1742485085000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/platformdirs-4.3.7-pyh29332c3_0.conda",
+  "version": "4.3.7"
+}

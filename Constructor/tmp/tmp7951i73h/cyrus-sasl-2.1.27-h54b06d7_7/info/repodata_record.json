@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "h54b06d7_7",
+  "build_number": 7,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "libntlm",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "openssl >=3.1.1,<4.0a0",
+    "krb5 >=1.21.1,<1.22.0a0"
+  ],
+  "fn": "cyrus-sasl-2.1.27-h54b06d7_7.conda",
+  "license": "BSD-3-Clause-Attribution",
+  "license_family": "BSD",
+  "md5": "dce22f70b4e5a407ce88f2be046f4ceb",
+  "name": "cyrus-sasl",
+  "platform": "linux",
+  "sha256": "d2ea5e52da745c4249e1a818095a28f9c57bd4df22cbfc645352defa468e86c2",
+  "size": 219527,
+  "subdir": "linux-64",
+  "timestamp": 1690061203000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/cyrus-sasl-2.1.27-h54b06d7_7.conda",
+  "version": "2.1.27"
+}

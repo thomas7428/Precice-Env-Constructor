@@ -1,0 +1,28 @@
+{
+  "arch": "x86_64",
+  "build": "hc4a0caf_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "xkeyboard-config",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "libxcb >=1.17.0,<2.0a0",
+    "libxml2 >=2.13.6,<2.14.0a0",
+    "xorg-libxau >=1.0.12,<2.0a0"
+  ],
+  "fn": "libxkbcommon-1.8.1-hc4a0caf_0.conda",
+  "license": "MIT/X11 Derivative",
+  "license_family": "MIT",
+  "md5": "e7e5b0652227d646b44abdcbd989da7b",
+  "name": "libxkbcommon",
+  "platform": "linux",
+  "sha256": "61a282353fcc512b5643ee58898130f5c7f8757c329a21fe407a3ef397d449eb",
+  "size": 644992,
+  "subdir": "linux-64",
+  "timestamp": 1741762262000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libxkbcommon-1.8.1-hc4a0caf_0.conda",
+  "version": "1.8.1"
+}

@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h3e06ad9_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc-ng >=13",
+    "libstdcxx-ng >=13",
+    "libexpat >=2.6.2,<3.0a0",
+    "libffi >=3.4,<4.0a0"
+  ],
+  "fn": "wayland-1.23.1-h3e06ad9_0.conda",
+  "license": "MIT",
+  "md5": "0a732427643ae5e0486a727927791da1",
+  "name": "wayland",
+  "platform": "linux",
+  "sha256": "0884b2023a32d2620192cf2e2fc6784b8d1e31cf9f137e49e00802d4daf7d1c1",
+  "size": 321561,
+  "subdir": "linux-64",
+  "timestamp": 1724530461000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/wayland-1.23.1-h3e06ad9_0.conda",
+  "version": "1.23.1"
+}

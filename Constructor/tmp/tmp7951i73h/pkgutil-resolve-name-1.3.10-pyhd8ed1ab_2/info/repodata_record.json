@@ -1,0 +1,21 @@
+{
+  "build": "pyhd8ed1ab_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "fn": "pkgutil-resolve-name-1.3.10-pyhd8ed1ab_2.conda",
+  "license": "MIT AND PSF-2.0",
+  "md5": "5a5870a74432aa332f7d32180633ad05",
+  "name": "pkgutil-resolve-name",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "adb2dde5b4f7da70ae81309cce6188ed3286ff280355cf1931b45d91164d2ad8",
+  "size": 10693,
+  "subdir": "noarch",
+  "timestamp": 1733344619000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pkgutil-resolve-name-1.3.10-pyhd8ed1ab_2.conda",
+  "version": "1.3.10"
+}

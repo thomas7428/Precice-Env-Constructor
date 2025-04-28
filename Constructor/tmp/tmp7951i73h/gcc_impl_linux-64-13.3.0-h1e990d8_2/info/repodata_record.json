@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "h1e990d8_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "binutils_impl_linux-64 >=2.40",
+    "libgcc >=13.3.0",
+    "libgcc-devel_linux-64 13.3.0 hc03c837_102",
+    "libgomp >=13.3.0",
+    "libsanitizer 13.3.0 he8ea267_2",
+    "libstdcxx >=13.3.0",
+    "sysroot_linux-64"
+  ],
+  "fn": "gcc_impl_linux-64-13.3.0-h1e990d8_2.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "f46cf0acdcb6019397d37df1e407ab91",
+  "name": "gcc_impl_linux-64",
+  "platform": "linux",
+  "sha256": "c3e9f243ea8292eecad78bb200d8f5b590e0f82bf7e7452a3a7c8df4eea6f774",
+  "size": 66770653,
+  "subdir": "linux-64",
+  "timestamp": 1740240400000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-13.3.0-h1e990d8_2.conda",
+  "version": "13.3.0"
+}

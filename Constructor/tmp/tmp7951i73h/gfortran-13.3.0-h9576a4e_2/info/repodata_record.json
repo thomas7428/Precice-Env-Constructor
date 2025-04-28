@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h9576a4e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "gcc 13.3.0.*",
+    "gcc_impl_linux-64 13.3.0.*",
+    "gfortran_impl_linux-64 13.3.0.*"
+  ],
+  "fn": "gfortran-13.3.0-h9576a4e_2.conda",
+  "license": "BSD-3-Clause",
+  "md5": "19e6d3c9cde10a0a9a170a684082588e",
+  "name": "gfortran",
+  "platform": "linux",
+  "sha256": "9425741d57bbcf918fe98cb375508f31de0daa655f3cebe100a43cf7cb46ec39",
+  "size": 54740,
+  "subdir": "linux-64",
+  "timestamp": 1740240701000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/gfortran-13.3.0-h9576a4e_2.conda",
+  "version": "13.3.0"
+}
