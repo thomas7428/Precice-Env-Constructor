@@ -1,6 +1,10 @@
 # Script intented to be run after the installation of the package
 mkdir ~/src/
 
+# Activate the precice_env environment
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate precice_env
+
 #Installing Calculix adapter
 cd ~
 wget http://www.dhondt.de/ccx_2.20.src.tar.bz2
@@ -19,12 +23,12 @@ sed -i 's|^YAML_LIBS.*|YAML_LIBS         = -L$(CONDA_PREFIX)/lib -lyaml-cpp|' Ma
 # We need to adapt the compiler flags because of the recent GCC we use (>= 10)
 sed -i '/^FFLAGS =/s|$| -fallow-argument-mismatch|' Makefile
 
-bash make clean
-bash make
+make clean
+make
 # Put the compiled bin inside the environment
 cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
 # Test it via the version command
-bash ccx_preCICE --version
+ccx_preCICE --version
 
 #Installing dolfinx adapter 
 #cd ~/src/
