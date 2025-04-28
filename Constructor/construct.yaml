@@ -24,7 +24,6 @@ specs:
   - pyprecice        # pyprecice package
   - fenics-dolfin  # FEniCS DOLFINX
   - openfoam     # OpenFOAM
-  - calculix     # Calculix
   - paraview     # ParaView
   - compilers # Compilers
   - cmake       # CMake
@@ -36,6 +35,7 @@ specs:
   - yaml-cpp
   - arpack
   - fenicsprecice
+  - tar
 
 # Virtual specifications (for architecture, specific versions, etc.)
 virtual_specs:

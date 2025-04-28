@@ -10,6 +10,12 @@ echo "🛠️ Creating the installer using Constructor..."
 constructor . --platform=linux-64 -v
 echo "✅ Installer created successfully."
 
+# Remove temp and sd
+echo "🧹 Removing temp and sd folders..."
+rm -rf temp
+rm -rf sd
+echo "✅ Temp and sd folders removed."
+
 # Check if the source file exists
 if [ ! -f "$SOURCE_FILE" ]; then
   echo "❌ The file $SOURCE_FILE does not exist."
@@ -23,5 +29,11 @@ rm -f "$CONSTRUCTOR_DIR"/part_*
 # Split the file
 echo "✂️ Splitting $SOURCE_FILE into chunks of $CHUNK_SIZE..."
 split -b "$CHUNK_SIZE" "$SOURCE_FILE" "$CONSTRUCTOR_DIR/part_"
+
+# Remove the original file
+echo "🗑️ Removing the original file $SOURCE_FILE...
+rm -f "$SOURCE_FILE"
+echo "✅ Original file removed."
+
 
 echo "✅ Splitting completed. Chunks placed in $CONSTRUCTOR_DIR/"
