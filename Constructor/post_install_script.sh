@@ -13,7 +13,7 @@ source ~/.cshrc
 #Installing Calculix adapter
 cd ~/Precice-Env-Constructor/Constructor/
 # Extract the source code from Constructor into ~/
-tar xvjf ccx_2.20.src.tar.bz2 ~/Caculix
+tar xvjf ccx_2.20.src.tar.bz2 -C ~/
 cd ~/src/
 wget https://github.com/precice/calculix-adapter/archive/refs/tags/v2.20.1.tar.gz
 tar -xzf v2.20.1.tar.gz
@@ -48,11 +48,11 @@ ccx_preCICE --version
 #bash ./run.sh
 
 # Installing dolfin adapter
-cd ~/src/
-wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
-tar -xzf v2.2.0.tar.gz 
-cd fenics-adapter-2.2.0
-pip install --no-deps .
+#cd ~/src/
+#wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
+#tar -xzf v2.2.0.tar.gz 
+#cd fenics-adapter-2.2.0
+#pip install --no-deps .
 # Test the installation
 python3 -c "import fenicsprecice"
 

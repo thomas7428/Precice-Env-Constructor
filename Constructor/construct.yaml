@@ -22,7 +22,8 @@ specs:
   - pip    # pip package manager
   - precice    # precice package from conda-forge
   - pyprecice        # pyprecice package
-  - fenics-dolfin  # FEniCS DOLFINX
+  - fenics-dolfin  # FEniCS DOLFIN
+  - fenicsprecice  # FEniCS-precice interface
   - openfoam     # OpenFOAM
   - paraview     # ParaView
   - compilers # Compilers
