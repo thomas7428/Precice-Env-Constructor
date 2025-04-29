@@ -26,6 +26,7 @@ specs:
   - fenicsprecice  # FEniCS-precice interface
   - openfoam     # OpenFOAM
   - paraview     # ParaView
+  - ccx2paraview # Calculix outpu to ParaView input converter
   - compilers # Compilers
   - cmake       # CMake
   - make        # Make
