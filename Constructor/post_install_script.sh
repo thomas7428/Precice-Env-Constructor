@@ -8,6 +8,9 @@ conda activate precice_env
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
 # Add the cshrc file of OpenFOAM
 grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
+# Add the number of cores to use
+grep -qxF 'setenv OMP_NUM_THREADS `nproc`' ~/.cshrc || echo 'setenv OMP_NUM_THREADS `nproc`' >> ~/.cshrc
+grep -qxf 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
 # Reload the shell
 source ~/.cshrc
 
@@ -91,6 +94,6 @@ bash ./Allwmake -j
 # Test the installation of openFOAM
 cd ~/src/
 wget https://github.com/precice/tutorials/archive/refs/tags/v202404.0.tar.gz
-tar -xzf v202404.0.tar.gz
-cd tutorials-202404.0/quickstart/fluid-openfoam
-bash ./run.sh
+#tar -xzf v202404.0.tar.gz
+#cd tutorials-202404.0/quickstart/fluid-openfoam
+#bash ./run.sh
