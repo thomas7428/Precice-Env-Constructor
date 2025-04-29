@@ -32,7 +32,7 @@ split -b "$CHUNK_SIZE" "$SOURCE_FILE" "$CONSTRUCTOR_DIR/part_"
 
 # Remove the original file
 echo "🗑️ Removing the original file $SOURCE_FILE...
-rm -f "$SOURCE_FILE"
+rm -rf $SOURCE_FILE
 echo "✅ Original file removed."
 
 

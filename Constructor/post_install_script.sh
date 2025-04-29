@@ -11,7 +11,7 @@ source ~/.cshrc
 
 
 #Installing Calculix adapter
-cd ~/Precice-Env-Constructor/Cosntructor/
+cd ~/Precice-Env-Constructor/Constructor/
 # Extract the source code from Constructor into ~/
 tar xvjf ccx_2.20.src.tar.bz2 ~/Caculix
 cd ~/src/
@@ -52,7 +52,7 @@ cd ~/src/
 wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
 tar -xzf v2.2.0.tar.gz 
 cd fenics-adapter-2.2.0
-pip install .
+pip install --no-deps .
 # Test the installation
 python3 -c "import fenicsprecice"
 
