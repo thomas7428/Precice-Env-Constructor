@@ -31,7 +31,7 @@ echo "✂️ Splitting $SOURCE_FILE into chunks of $CHUNK_SIZE..."
 split -b "$CHUNK_SIZE" "$SOURCE_FILE" "$CONSTRUCTOR_DIR/part_"
 
 # Remove the original file
-echo "🗑️ Removing the original file $SOURCE_FILE...
+echo "🗑️ Removing the original file $SOURCE_FILE..."
 rm -rf $SOURCE_FILE
 echo "✅ Original file removed."
 

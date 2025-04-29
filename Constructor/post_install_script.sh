@@ -6,6 +6,8 @@ source ~/miniconda3/etc/profile.d/conda.sh
 conda activate precice_env
 # Modify MPI comportement for memory constraints
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
+# Add the cshrc file of OpenFOAM
+grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
 # Reload the shell
 source ~/.cshrc
 
@@ -90,5 +92,5 @@ bash ./Allwmake -j
 cd ~/src/
 wget https://github.com/precice/tutorials/archive/refs/tags/v202404.0.tar.gz
 tar -xzf v202404.0.tar.gz
-cd tutorials-202404.0/quickstart/fluide-openfoam
+cd tutorials-202404.0/quickstart/fluid-openfoam
 bash ./run.sh
