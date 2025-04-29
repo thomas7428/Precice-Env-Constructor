@@ -2,6 +2,10 @@
 
 The **Precice Environment Constructor** is a tool designed to simplify the setup and configuration of the [preCICE](https://precice.org/) environment for simulation coupling. This repository provides scripts and instructions to streamline the installation process, ensuring a smooth experience for users.
 
+## Warning
+
+The source code for **CalculiX 2.20** is included in this repository. This is due to internet access restrictions from the official site and the unavailability of repositories hosting the 2.20 version of **CalculiX**. Please ensure compliance with the licensing terms of **CalculiX** when using or distributing this code.
+
 ## Features
 
 - Preconfigured setup for **preCICE** and its adapters.
