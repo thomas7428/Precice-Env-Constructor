@@ -24,7 +24,7 @@ sed -i 's|^YAML_LIBS.*|YAML_LIBS         = -L$(CONDA_PREFIX)/lib -lyaml-cpp|' Ma
 sed -i '/^FFLAGS =/s|$| -fallow-argument-mismatch|' Makefile
 
 make clean
-make
+make -j
 # Put the compiled bin inside the environment
 cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
 # Test it via the version command
@@ -40,6 +40,15 @@ ccx_preCICE --version
 # Testing the installation
 #cd ~/src/fenicsx-adapter/tutorials/partitioned-heat-conduction/dirichlet-fenicsx
 #bash ./run.sh
+
+# Installing dolfin adapter
+cd ~/src/
+wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
+tar -xzf v2.2.0.tar.gz 
+cd fenics-adapter-2.2.0
+pip install .
+# Test the installation
+python3 -c "import fenicsprecice"
 
 # Installing OpenFOAM adapter
 cd ~/src/
@@ -69,7 +78,7 @@ sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/finiteVol
 sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OSspecific/POSIX/lnInclude \\' Make/options && \
 sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OpenFOAM/lnInclude \\' Make/options
 
-bash ./Allwmake
+bash ./Allwmake -j
 
 # Test the installation of openFOAM
 cd ~/src/

@@ -33,8 +33,9 @@ specs:
   - spooles
   - yaml-cpp
   - arpack
-  - fenicsprecice
   - tar
+  - gmsh
+  - python-gmsh
   - btop # For easy monitoring
 
 # Virtual specifications (for architecture, specific versions, etc.)
