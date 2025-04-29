@@ -1,6 +1,6 @@
 name: precice_env  # Name of the Conda environment
 company: ArianeGroup  # Company name
-version: 1.0.0  # Version of the environment
+version: 1.1.0  # Version of the environment
 channels:
   - https://conda.anaconda.org/conda-forge
   - defaults
@@ -30,12 +30,12 @@ specs:
   - make        # Make
   - git         # Git
   - nano         # Nano text editor
-  - mpi4py # MPI for Python compatible version for dolfinx
   - spooles
   - yaml-cpp
   - arpack
   - fenicsprecice
   - tar
+  - btop # For easy monitoring
 
 # Virtual specifications (for architecture, specific versions, etc.)
 virtual_specs:

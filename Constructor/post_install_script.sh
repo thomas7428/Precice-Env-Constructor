@@ -42,7 +42,6 @@ ccx_preCICE --version
 #bash ./run.sh
 
 # Installing OpenFOAM adapter
-mkdir ~/src/
 cd ~/src/
 git clone https://github.com/precice/openfoam-adapter.git
 cd openfoam-adapter
@@ -50,25 +49,26 @@ cd openfoam-adapter
 git checkout master
 git checkout v1.3.1
 
+
 # Adapt for the conda installation
-sed -i '/^EXE_INC.*/a \
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/interfaceProperties/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/interfaceProperties/ \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/twoPhaseMixture/lnInclude/ \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressible/lnInclude/ \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressibleTwoPhaseMixture/lnInclude/ \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/immiscibleIncompressibleTwoPhaseMixture/lnInclude/ \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/ \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressible/transportModel \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/incompressible/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/compressible/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/thermophysicalModels/basic/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/turbulenceModels/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/compressible/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/meshTools/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/finiteVolume/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OSspecific/POSIX/lnInclude \\
-    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OpenFOAM/lnInclude \\' Make/options
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/interfaceProperties/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/interfaceProperties/ \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/twoPhaseMixture/lnInclude/ \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressible/lnInclude/ \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressibleTwoPhaseMixture/lnInclude/ \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/immiscibleIncompressibleTwoPhaseMixture/lnInclude/ \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/ \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/incompressible/transportModel \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/incompressible/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/transportModels/compressible/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/thermophysicalModels/basic/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/turbulenceModels/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/TurbulenceModels/compressible/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/meshTools/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/finiteVolume/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OSspecific/POSIX/lnInclude \\' Make/options && \
+sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OpenFOAM/lnInclude \\' Make/options
+
 bash ./Allwmake
 
 # Test the installation of openFOAM
