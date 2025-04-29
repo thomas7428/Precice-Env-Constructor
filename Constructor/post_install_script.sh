@@ -6,29 +6,29 @@ source ~/miniconda3/etc/profile.d/conda.sh
 conda activate precice_env
 
 #Installing Calculix adapter
-cd ~
-wget http://www.dhondt.de/ccx_2.20.src.tar.bz2
-tar xvjf ccx_2.20.src.tar.bz2
-cd ~/src/
-wget https://github.com/precice/calculix-adapter/archive/refs/tags/v2.20.1.tar.gz
-tar -xzf v2.20.1.tar.gz
-cd calculix-adapter-2.20.1
+#cd ~
+#wget http://www.dhondt.de/ccx_2.20.src.tar.bz2
+#tar xvjf ccx_2.20.src.tar.bz2
+#cd ~/src/
+#wget https://github.com/precice/calculix-adapter/archive/refs/tags/v2.20.1.tar.gz
+#tar -xzf v2.20.1.tar.gz
+#cd calculix-adapter-2.20.1
 # We need to adapt to the conda installation
-sed -i 's|^SPOOLES_INCLUDE.*|SPOOLES_INCLUDE   = -I$(CONDA_PREFIX)/include/spooles|' Makefile
-sed -i 's|^SPOOLES_LIBS.*|SPOOLES_LIBS      = -L$(CONDA_PREFIX)/lib -l:spoolesMT.a -l:spooles.a|' Makefile
-sed -i 's|^ARPACK_INCLUDE.*|ARPACK_INCLUDE    = -I$(CONDA_PREFIX)/include/arpack|' Makefile
-sed -i 's|^ARPACK_LIBS.*|ARPACK_LIBS       = -L$(CONDA_PREFIX)/lib -larpack -llapack -lblas|' Makefile
-sed -i 's|^YAML_INCLUDE.*|YAML_INCLUDE      = -I$(CONDA_PREFIX)/include/yaml-cpp|' Makefile
-sed -i 's|^YAML_LIBS.*|YAML_LIBS         = -L$(CONDA_PREFIX)/lib -lyaml-cpp|' Makefile
+#sed -i 's|^SPOOLES_INCLUDE.*|SPOOLES_INCLUDE   = -I$(CONDA_PREFIX)/include/spooles|' Makefile
+#sed -i 's|^SPOOLES_LIBS.*|SPOOLES_LIBS      = -L$(CONDA_PREFIX)/lib -l:spoolesMT.a -l:spooles.a|' Makefile
+#sed -i 's|^ARPACK_INCLUDE.*|ARPACK_INCLUDE    = -I$(CONDA_PREFIX)/include/arpack|' Makefile
+#sed -i 's|^ARPACK_LIBS.*|ARPACK_LIBS       = -L$(CONDA_PREFIX)/lib -larpack -llapack -lblas|' Makefile
+#sed -i 's|^YAML_INCLUDE.*|YAML_INCLUDE      = -I$(CONDA_PREFIX)/include/yaml-cpp|' Makefile
+#sed -i 's|^YAML_LIBS.*|YAML_LIBS         = -L$(CONDA_PREFIX)/lib -lyaml-cpp|' Makefile
 # We need to adapt the compiler flags because of the recent GCC we use (>= 10)
-sed -i '/^FFLAGS =/s|$| -fallow-argument-mismatch|' Makefile
+#sed -i '/^FFLAGS =/s|$| -fallow-argument-mismatch|' Makefile
 
-make clean
-make -j
+#make clean
+#make -j
 # Put the compiled bin inside the environment
-cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
+#cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
 # Test it via the version command
-ccx_preCICE --version
+#ccx_preCICE --version
 
 #Installing dolfinx adapter 
 #cd ~/src/
@@ -42,13 +42,13 @@ ccx_preCICE --version
 #bash ./run.sh
 
 # Installing dolfin adapter
-cd ~/src/
-wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
-tar -xzf v2.2.0.tar.gz 
-cd fenics-adapter-2.2.0
-pip install .
+#cd ~/src/
+#wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
+#tar -xzf v2.2.0.tar.gz 
+#cd fenics-adapter-2.2.0
+#pip install .
 # Test the installation
-python3 -c "import fenicsprecice"
+#python3 -c "import fenicsprecice"
 
 # Installing OpenFOAM adapter
 cd ~/src/
