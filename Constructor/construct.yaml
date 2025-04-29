@@ -18,14 +18,15 @@ pre_install: pre_install_script.sh  # Pre-installation script to run before envi
 
 # System dependencies and other general specifications
 specs:
-  - python # Python
+  #- python # Python
   - pip    # pip package manager
   - precice    # precice package from conda-forge
   - pyprecice        # pyprecice package
-  - fenics-dolfin  # FEniCS DOLFIN
-  - fenicsprecice  # FEniCS-precice interface
+  - fenics-dolfinx  # FEniCS DOLFIN    
+  #- mshr # FEniCS mshr
+  #- fenicsprecice  # FEniCS-precice interface
   - openfoam     # OpenFOAM
-  - paraview     # ParaView
+  - paraview
   - compilers # Compilers
   - cmake       # CMake
   - make        # Make

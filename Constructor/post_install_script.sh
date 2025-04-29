@@ -49,10 +49,10 @@ cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
 ccx_preCICE --version
 
 #Installing dolfinx adapter 
-#cd ~/src/
-#git clone https://github.com/precice/fenicsx-adapter.git
-#cd fenicsx-adapter
-#pip3 install --user .
+cd ~/src/
+git clone https://github.com/precice/fenicsx-adapter.git
+cd fenicsx-adapter
+pip3 install --user .
 # We need to downgrade mpi4py to a pre 4.0 version
 #conda install -c conda-forge mpi4py=3.1.6
 # Testing the installation
