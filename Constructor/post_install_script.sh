@@ -4,8 +4,9 @@ mkdir ~/src/
 # Activate the precice_env environment
 # source ~/miniconda3/etc/profile.d/conda.sh
 # conda activate precice_env
-grep -qxF 'source ~/miniconda3/etc/profile.d/conda.csh' ~/.bashrc || echo 'source ~/miniconda3/etc/profile.d/conda.csh' >> ~/.cshrc
-grep -qxF 'conda activate precice_env' ~/.bashrc || echo 'conda activate precice_env' >> ~/.cshrc
+#grep -qxF 'source ~/miniconda3/etc/profile.d/conda.sh' ~/.bashrc || echo 'source ~/miniconda3/etc/profile.d/conda.sh' >> ~/.cshrc
+#grep -qxF 'conda init' ~/.bashrc || echo 'conda init' >> ~/.cshrc
+#grep -qxF 'conda activate precice_env' ~/.bashrc || echo 'conda activate precice_env' >> ~/.cshrc
 
 # Add the CONDA_PREFIX to the cshrc
 grep -qxF 'setenv CONDA_PREFIX ~/miniconda3/envs/precice_env' ~/.cshrc || echo 'setenv CONDA_PREFIX ~/miniconda3/envs/precice_env' >> ~/.cshrc
@@ -17,7 +18,7 @@ grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFI
 # Add the number of threads to use
 grep -qxF 'setenv OMP_NUM_THREADS 1' ~/.cshrc || echo 'setenv OMP_NUM_THREADS 1' >> ~/.cshrc
 grep -qxF 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
-# Reload the shell
+# Reload the shell with the right terminal
 source ~/.cshrc
 
 
