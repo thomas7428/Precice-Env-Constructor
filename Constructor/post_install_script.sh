@@ -2,8 +2,10 @@
 mkdir ~/src/
 
 # Activate the precice_env environment
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate precice_env
+# source ~/miniconda3/etc/profile.d/conda.sh
+# conda activate precice_env
+grep -qxF 'source ~/miniconda3/etc/profile.d/conda.csh' ~/.bashrc || echo 'source ~/miniconda3/etc/profile.d/conda.csh' >> ~/.cshrc
+grep -qxF 'conda activate precice_env' ~/.bashrc || echo 'conda activate precice_env' >> ~/.cshrc
 
 # Add the CONDA_PREFIX to the cshrc
 grep -qxF 'setenv CONDA_PREFIX ~/miniconda3/envs/precice_env' ~/.cshrc || echo 'setenv CONDA_PREFIX ~/miniconda3/envs/precice_env' >> ~/.cshrc
@@ -14,7 +16,7 @@ grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >
 grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
 # Add the number of threads to use
 grep -qxF 'setenv OMP_NUM_THREADS 1' ~/.cshrc || echo 'setenv OMP_NUM_THREADS 1' >> ~/.cshrc
-greop -qxF 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
+grep -qxF 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
 # Reload the shell
 source ~/.cshrc
 
@@ -46,10 +48,10 @@ cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
 ccx_preCICE --version
 
 #Installing dolfinx adapter 
-cd ~/src/
-git clone https://github.com/precice/fenicsx-adapter.git
-cd fenicsx-adapter
-pip3 install --user .
+#cd ~/src/
+#git clone https://github.com/precice/fenicsx-adapter.git
+#cd fenicsx-adapter
+#pip3 install --user .
 # We need to downgrade mpi4py to a pre 4.0 version
 #conda install -c conda-forge mpi4py=3.1.6
 # Testing the installation
@@ -70,7 +72,7 @@ git clone https://bitbucket.org/fenics-project/mshr.git
 cd mshr
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_BUILD_TYPE=Release ..
+cmake -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ..
 make -j
 make install
 python3 -c "import fenicsprecice"
