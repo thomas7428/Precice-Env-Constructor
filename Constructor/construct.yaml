@@ -21,12 +21,14 @@ specs:
   #- python # Python
   - pip    # pip package manager
   - precice    # precice package from conda-forge
+  - boost    # Boost libraries
   - pyprecice        # pyprecice package
   - fenics-dolfin  # FEniCS DOLFIN    
   #- mshr # FEniCS mshr
   - fenicsprecice  # FEniCS-precice interface
   - openfoam     # OpenFOAM
   - paraview
+  - ccx2paraview
   - compilers # Compilers
   - cmake       # CMake
   - make        # Make

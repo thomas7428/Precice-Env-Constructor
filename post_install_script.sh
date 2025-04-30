@@ -2,12 +2,10 @@
 mkdir ~/src/
 
 # Activate the precice_env environment
-source ~/miniconda3/etc/profile.d/conda.sh
+source ~/miniconda3/etc/profile.d/conda.csh
 conda activate precice_env
 # Modify MPI comportement for memory constraints
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
-# Add the cshrc file of OpenFOAM
-grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
 # Add the OpenFOAM environment variables
 grep -qxF 'setenv WM_PROJECT_DIR $CONDA_PREFIX' ~/.cshrc || echo 'setenv WM_PROJECT_DIR $CONDA_PREFIX' >> ~/.cshrc
 grep -qxF 'setenv WM_PROJECT_USER_DIR $HOME/OpenFOAM/v2412' ~/.cshrc || echo 'setenv WM_PROJECT_USER_DIR $HOME/OpenFOAM/v2412' >> ~/.cshrc
@@ -15,9 +13,12 @@ grep -qxF 'setenv FOAM_SRC $CONDA_PREFIX/include/OpenFOAM-2412/' ~/.cshrc || ech
 grep -qxF 'setenv FOAM_APPBIN $CONDA_PREFIX/bin/' ~/.cshrc || echo 'setenv FOAM_APPBIN $CONDA_PREFIX/bin/' >> ~/.cshrc
 grep -qxF 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib/' ~/.cshrc || echo 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib/' >> ~/.cshrc
 
+# Add the cshrc file of OpenFOAM
+grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
+
 # Add the number of cores to use
-grep -qxF 'setenv OMP_NUM_THREADS `nproc`' ~/.cshrc || echo 'setenv OMP_NUM_THREADS `nproc`' >> ~/.cshrc
-grep -qxf 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
+grep -qxF 'setenv OMP_NUM_THREADS "24"' ~/.cshrc || echo 'setenv OMP_NUM_THREADS `nproc`' >> ~/.cshrc
+grep -qxf 'setenv WM_NCOMPPROCS "24"' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
 # Reload the shell
 source ~/.cshrc
 
