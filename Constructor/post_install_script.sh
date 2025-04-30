@@ -10,6 +10,10 @@ grep -qxF 'source ~/miniconda3/etc/profile.d/conda.sh' ~/.bashrc || echo 'source
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
 grep -qxF 'export UCX_TLS shm,self' ~/.bashrc || echo 'export UCX_TLS shm,self' >> ~/.bashrc
 
+#Add CONDA_PREFIX
+grep -qxF 'setenv CONDA_PREFIX $HOME/miniconda3/envs/precice_env' ~/.cshrc || echo 'setenv CONDA_PREFIX $HOME/miniconda3/envs/precice_env' >> ~/.cshrc
+grep -qxF 'export CONDA_PREFIX=$HOME/miniconda3/envs/precice_env' ~/.bashrc || echo 'export CONDA_PREFIX=$HOME/miniconda3/envs/precice_env' >> ~/.bashrc
+
 # Add the cshrc file of OpenFOAM
 grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
 grep -qxF 'source $CONDA_PREFIX/etc/bashrc' ~/.bashrc || echo 'source $CONDA_PREFIX/etc/bashrc' >> ~/.bashrc
