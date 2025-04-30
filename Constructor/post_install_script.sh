@@ -6,14 +6,14 @@ source ~/miniconda3/etc/profile.d/conda.sh
 conda activate precice_env
 # Modify MPI comportement for memory constraints
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
-# Add the cshrc file of OpenFOAM
-grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
 # Add the OpenFOAM environment variables
 grep -qxF 'setenv WM_PROJECT_DIR $CONDA_PREFIX' ~/.cshrc || echo 'setenv WM_PROJECT_DIR $CONDA_PREFIX' >> ~/.cshrc
 grep -qxF 'setenv WM_PROJECT_USER_DIR $HOME/OpenFOAM/v2412' ~/.cshrc || echo 'setenv WM_PROJECT_USER_DIR $HOME/OpenFOAM/v2412' >> ~/.cshrc
 grep -qxF 'setenv FOAM_SRC $CONDA_PREFIX/include/OpenFOAM-2412/' ~/.cshrc || echo 'setenv FOAM_SRC $CONDA_PREFIX/include/OpenFOAM-2412/' >> ~/.cshrc
 grep -qxF 'setenv FOAM_APPBIN $CONDA_PREFIX/bin/' ~/.cshrc || echo 'setenv FOAM_APPBIN $CONDA_PREFIX/bin/' >> ~/.cshrc
 grep -qxF 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib/' ~/.cshrc || echo 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib/' >> ~/.cshrc
+# Add the cshrc file of OpenFOAM
+grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
 
 # Add the number of cores to use
 grep -qxF 'setenv OMP_NUM_THREADS `nproc`' ~/.cshrc || echo 'setenv OMP_NUM_THREADS `nproc`' >> ~/.cshrc
@@ -66,6 +66,16 @@ pip3 install --user .
 #cd fenics-adapter-2.2.0
 #pip install --no-deps .
 # Test the installation
+
+# Installing the mshr module
+cd ~/src/
+git clone https://bitbucket.org/fenics-project/mshr.git
+cd mshr
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_BUILD_TYPE=Release ..
+make -j
+make install
 python3 -c "import fenicsprecice"
 
 # Installing OpenFOAM adapter
