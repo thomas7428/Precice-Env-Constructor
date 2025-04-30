@@ -1,53 +1,22 @@
 # Script intented to be run after the installation of the package
 mkdir ~/src/
 
-# Activate the precice_env environment
-source ~/miniconda3/etc/profile.d/conda.csh
-conda activate precice_env
 # Modify MPI comportement for memory constraints
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
 # Add the OpenFOAM environment variables
 grep -qxF 'setenv WM_PROJECT_DIR $CONDA_PREFIX' ~/.cshrc || echo 'setenv WM_PROJECT_DIR $CONDA_PREFIX' >> ~/.cshrc
-grep -qxF 'setenv WM_PROJECT_USER_DIR $HOME/OpenFOAM/v2412' ~/.cshrc || echo 'setenv WM_PROJECT_USER_DIR $HOME/OpenFOAM/v2412' >> ~/.cshrc
-grep -qxF 'setenv FOAM_SRC $CONDA_PREFIX/include/OpenFOAM-2412/' ~/.cshrc || echo 'setenv FOAM_SRC $CONDA_PREFIX/include/OpenFOAM-2412/' >> ~/.cshrc
-grep -qxF 'setenv FOAM_APPBIN $CONDA_PREFIX/bin/' ~/.cshrc || echo 'setenv FOAM_APPBIN $CONDA_PREFIX/bin/' >> ~/.cshrc
-grep -qxF 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib/' ~/.cshrc || echo 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib/' >> ~/.cshrc
+grep -qxF 'setenv FOAM_SRC $CONDA_PREFIX' ~/.cshrc || echo 'setenv FOAM_SRC $CONDA_PREFIX' >> ~/.cshrc
+grep -qxF 'setenv FOAM_APPBIN $CONDA_PREFIX/bin' ~/.cshrc || echo 'setenv FOAM_APPBIN $CONDA_PREFIX/bin' >> ~/.cshrc
+grep -qxF 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib' ~/.cshrc || echo 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib' >> ~/.cshrc
 
 # Add the cshrc file of OpenFOAM
 grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
 
 # Add the number of cores to use
-grep -qxF 'setenv OMP_NUM_THREADS "24"' ~/.cshrc || echo 'setenv OMP_NUM_THREADS `nproc`' >> ~/.cshrc
-grep -qxf 'setenv WM_NCOMPPROCS "24"' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
+grep -qxF 'setenv OMP_NUM_THREADS `nproc`' ~/.cshrc || echo 'setenv OMP_NUM_THREADS `nproc`' >> ~/.cshrc
+grep -qxf 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
 # Reload the shell
 source ~/.cshrc
-
-
-#Installing Calculix adapter
-cd ~/Precice-Env-Constructor/Constructor/
-# Extract the source code from Constructor into ~/
-tar xvjf ccx_2.20.src.tar.bz2 -C ~/
-cd ~/src/
-wget https://github.com/precice/calculix-adapter/archive/refs/tags/v2.20.1.tar.gz
-tar -xzf v2.20.1.tar.gz
-cd calculix-adapter-2.20.1
-
-# We need to adapt to the conda installation
-sed -i 's|^SPOOLES_INCLUDE.*|SPOOLES_INCLUDE   = -I$(CONDA_PREFIX)/include/spooles|' Makefile
-sed -i 's|^SPOOLES_LIBS.*|SPOOLES_LIBS      = -L$(CONDA_PREFIX)/lib -l:spoolesMT.a -l:spooles.a|' Makefile
-sed -i 's|^ARPACK_INCLUDE.*|ARPACK_INCLUDE    = -I$(CONDA_PREFIX)/include/arpack|' Makefile
-sed -i 's|^ARPACK_LIBS.*|ARPACK_LIBS       = -L$(CONDA_PREFIX)/lib -larpack -llapack -lblas|' Makefile
-sed -i 's|^YAML_INCLUDE.*|YAML_INCLUDE      = -I$(CONDA_PREFIX)/include/yaml-cpp|' Makefile
-sed -i 's|^YAML_LIBS.*|YAML_LIBS         = -L$(CONDA_PREFIX)/lib -lyaml-cpp|' Makefile
-# We need to adapt the compiler flags because of the recent GCC we use (>= 10)
-sed -i '/^FFLAGS =/s|$| -fallow-argument-mismatch|' Makefile
-make clean
-make -j
-
-# Put the compiled bin inside the environment
-cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
-# Test it via the version command
-ccx_preCICE --version
 
 #Installing dolfinx adapter 
 #cd ~/src/
@@ -110,9 +79,32 @@ sed -i '/^EXE_INC.*/a \    -I$(CONDA_PREFIX)/include/OpenFOAM-2412/src/OpenFOAM/
 
 bash ./Allwmake -j
 
-# Test the installation of openFOAM
+
+#Pause to check if the installation was successful
+read -p "Press any key to continue... " -n1 -s
+
+#Installing Calculix adapter
+cd ~/Precice-Env-Constructor/Constructor/
+# Extract the source code from Constructor into ~/
+tar xvjf ccx_2.20.src.tar.bz2 -C ~/
 cd ~/src/
-wget https://github.com/precice/tutorials/archive/refs/tags/v202404.0.tar.gz
-tar -xzf v202404.0.tar.gz
-cd tutorials-202404.0/quickstart/fluid-openfoam
-bash ./run.sh
+wget https://github.com/precice/calculix-adapter/archive/refs/tags/v2.20.1.tar.gz
+tar -xzf v2.20.1.tar.gz
+cd calculix-adapter-2.20.1
+
+# We need to adapt to the conda installation
+sed -i 's|^SPOOLES_INCLUDE.*|SPOOLES_INCLUDE   = -I$(CONDA_PREFIX)/include/spooles|' Makefile
+sed -i 's|^SPOOLES_LIBS.*|SPOOLES_LIBS      = -L$(CONDA_PREFIX)/lib -l:spoolesMT.a -l:spooles.a|' Makefile
+sed -i 's|^ARPACK_INCLUDE.*|ARPACK_INCLUDE    = -I$(CONDA_PREFIX)/include/arpack|' Makefile
+sed -i 's|^ARPACK_LIBS.*|ARPACK_LIBS       = -L$(CONDA_PREFIX)/lib -larpack -llapack -lblas|' Makefile
+sed -i 's|^YAML_INCLUDE.*|YAML_INCLUDE      = -I$(CONDA_PREFIX)/include/yaml-cpp|' Makefile
+sed -i 's|^YAML_LIBS.*|YAML_LIBS         = -L$(CONDA_PREFIX)/lib -lyaml-cpp|' Makefile
+# We need to adapt the compiler flags because of the recent GCC we use (>= 10)
+sed -i '/^FFLAGS =/s|$| -fallow-argument-mismatch|' Makefile
+make clean
+make -j
+
+# Put the compiled bin inside the environment
+cp ~/src/calculix-adapter-2.20.1/bin/ccx_preCICE $CONDA_PREFIX/bin/
+# Test it via the version command
+ccx_preCICE --version
