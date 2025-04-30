@@ -2,8 +2,11 @@
 mkdir ~/src/
 
 # Activate the precice_env environment
-source ~/miniconda3/etc/profile.d/conda.csh
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate precice_env
+
+# Add the CONDA_PREFIX to the cshrc
+grep -qxF 'setenv CONDA_PREFIX ~/miniconda3/envs/precice_env' ~/.cshrc || echo 'setenv CONDA_PREFIX ~/miniconda3/envs/precice_env' >> ~/.cshrc
 
 # Modify MPI comportement for memory constraints
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc

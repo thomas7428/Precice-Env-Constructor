@@ -35,5 +35,11 @@ echo "🗑️ Removing the original file $SOURCE_FILE..."
 rm -rf $SOURCE_FILE
 echo "✅ Original file removed."
 
-
 echo "✅ Splitting completed. Chunks placed in $CONSTRUCTOR_DIR/"
+
+# Treat the permissions of run_precice_installer.sh which is one folder higher
+echo "🔒 Setting permissions for run_precice_installer.sh..."
+chmod +x $CONSTRUCTOR_DIR/../run_precice_installer.sh
+echo "✅ Permissions set."
+echo "✅ All done! You can now run the installer using the command:"
+echo "bash $CONSTRUCTOR_DIR/../run_precice_installer.sh"
