@@ -57,6 +57,7 @@ ccx_preCICE --version
 #pip install --no-deps .
 # Test the installation
 
+
 # Installing the mshr module
 cd ~/src/
 git clone https://bitbucket.org/fenics-project/mshr.git
@@ -101,6 +102,6 @@ bash ./Allwmake -j
 # Test the installation of openFOAM
 cd ~/src/
 wget https://github.com/precice/tutorials/archive/refs/tags/v202404.0.tar.gz
-#tar -xzf v202404.0.tar.gz
-#cd tutorials-202404.0/quickstart/fluid-openfoam
-#bash ./run.sh
+tar -xzf v202404.0.tar.gz
+cd tutorials-202404.0/quickstart/fluid-openfoam
+bash ./run.sh
