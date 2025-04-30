@@ -3,22 +3,24 @@ mkdir ~/src/
 
 # Activate the precice_env environment
 source ~/miniconda3/etc/profile.d/conda.sh
+conda activate precice_env
+
 grep -qxF 'source ~/miniconda3/etc/profile.d/conda.sh' ~/.cshrc || echo 'source ~/miniconda3/etc/profile.d/conda.sh' >> ~/.cshrc
 grep -qxF 'source ~/miniconda3/etc/profile.d/conda.sh' ~/.bashrc || echo 'source ~/miniconda3/etc/profile.d/conda.sh' >> ~/.bashrc
 
 # Modify MPI comportement for memory constraints
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
-grep -qxF 'export UCX_TLS shm,self' ~/.bashrc || echo 'export UCX_TLS shm,self' >> ~/.bashrc
+grep -qxF 'export UCX_TLS=shm,self' ~/.bashrc || echo 'export UCX_TLS=shm,self' >> ~/.bashrc
 
 #Add CONDA_PREFIX
 grep -qxF 'setenv CONDA_PREFIX $HOME/miniconda3/envs/precice_env' ~/.cshrc || echo 'setenv CONDA_PREFIX $HOME/miniconda3/envs/precice_env' >> ~/.cshrc
 grep -qxF 'export CONDA_PREFIX=$HOME/miniconda3/envs/precice_env' ~/.bashrc || echo 'export CONDA_PREFIX=$HOME/miniconda3/envs/precice_env' >> ~/.bashrc
 
 # Add the cshrc file of OpenFOAM
-grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
-grep -qxF 'source $CONDA_PREFIX/etc/bashrc' ~/.bashrc || echo 'source $CONDA_PREFIX/etc/bashrc' >> ~/.bashrc
+grep -qxF 'source $HOME/miniconda3/envs/precice_env/etc/cshrc' ~/.cshrc || echo 'source $HOME/miniconda3/envs/precice_env/etc/cshrc' >> ~/.cshrc
+grep -qxF 'source $HOME/miniconda3/envs/precice_env/etc/bashrc' ~/.bashrc || echo 'source $HOME/miniconda3/envs/precice_env/etc/bashrc' >> ~/.bashrc
 grep -qxF 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
-grep -qxF 'export WM_NCOMPPROCS `nproc`' ~/.bashrc || echo 'export WM_NCOMPPROCS `nproc`' >> ~/.bashrc
+grep -qxF 'export WM_NCOMPPROCS=`nproc`' ~/.bashrc || echo 'export WM_NCOMPPROCS=`nproc`' >> ~/.bashrc
 # Reload the shell with the right terminal
 source ~/.bashrc
 
