@@ -12,3 +12,8 @@ chmod +x "$CONSTRUCTOR_DIR/$FINAL_SCRIPT"
 
 echo "🚀 Launching $FINAL_SCRIPT..."
 "$CONSTRUCTOR_DIR/$FINAL_SCRIPT"
+
+echo "✅ $FINAL_SCRIPT executed successfully."
+
+# Inform that they will need to use the post_install_script.sh manually
+echo "⚠️ Please remember to run the post_install_script.sh manually after the installation."

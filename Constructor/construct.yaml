@@ -48,4 +48,4 @@ virtual_specs:
 
 installer_filename: "precice_env_installer.sh"
 
-post_install: post_install_script.sh  # Post-installation script to run after environment creation
+#post_install: post_install_script.sh  # Post-installation script to run after environment creation
