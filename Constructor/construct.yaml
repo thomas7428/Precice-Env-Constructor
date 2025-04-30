@@ -22,9 +22,9 @@ specs:
   - pip    # pip package manager
   - precice    # precice package from conda-forge
   - pyprecice        # pyprecice package
-  - fenics-dolfinx  # FEniCS DOLFIN    
+  - fenics-dolfin  # FEniCS DOLFIN    
   #- mshr # FEniCS mshr
-  #- fenicsprecice  # FEniCS-precice interface
+  - fenicsprecice  # FEniCS-precice interface
   - openfoam     # OpenFOAM
   - paraview
   - compilers # Compilers
