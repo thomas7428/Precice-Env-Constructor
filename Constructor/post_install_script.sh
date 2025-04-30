@@ -4,6 +4,7 @@ mkdir ~/src/
 # Activate the precice_env environment
 source ~/miniconda3/etc/profile.d/conda.csh
 conda activate precice_env
+
 # Modify MPI comportement for memory constraints
 grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
 # Add the cshrc file of OpenFOAM
