@@ -1,0 +1,22 @@
+{
+  "build": "he073ed8_18",
+  "build_number": 18,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64/",
+  "constrains": [
+    "sysroot_linux-64 2.17"
+  ],
+  "depends": [],
+  "fn": "kernel-headers_linux-64-3.10.0-he073ed8_18.conda",
+  "license": "LGPL-2.0-or-later AND LGPL-2.0-or-later WITH exceptions AND GPL-2.0-or-later AND MPL-2.0",
+  "license_family": "GPL",
+  "md5": "ad8527bf134a90e1c9ed35fa0b64318c",
+  "name": "kernel-headers_linux-64",
+  "noarch": "generic",
+  "package_type": "noarch_generic",
+  "sha256": "a922841ad80bd7b222502e65c07ecb67e4176c4fa5b03678a005f39fcc98be4b",
+  "size": 943486,
+  "subdir": "noarch",
+  "timestamp": 1729794504000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/kernel-headers_linux-64-3.10.0-he073ed8_18.conda",
+  "version": "3.10.0"
+}

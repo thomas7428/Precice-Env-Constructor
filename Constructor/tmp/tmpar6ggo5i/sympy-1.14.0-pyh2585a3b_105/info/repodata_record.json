@@ -1,0 +1,26 @@
+{
+  "build": "pyh2585a3b_105",
+  "build_number": 105,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__unix",
+    "cpython",
+    "python >=3.9",
+    "mpmath >=0.19",
+    "gmpy2 >=2.0.8"
+  ],
+  "fn": "sympy-1.14.0-pyh2585a3b_105.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "8c09fac3785696e1c477156192d64b91",
+  "name": "sympy",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "09d3b6ac51d437bc996ad006d9f749ca5c645c1900a854a6c8f193cbd13f03a8",
+  "size": 4616621,
+  "subdir": "noarch",
+  "timestamp": 1745946173000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/sympy-1.14.0-pyh2585a3b_105.conda",
+  "version": "1.14.0"
+}

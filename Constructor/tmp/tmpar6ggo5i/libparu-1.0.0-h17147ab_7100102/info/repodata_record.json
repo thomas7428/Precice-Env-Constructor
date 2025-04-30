@@ -1,0 +1,28 @@
+{
+  "arch": "x86_64",
+  "build": "h17147ab_7100102",
+  "build_number": 7100102,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libstdcxx >=13",
+    "libgcc >=13",
+    "_x86_64-microarch-level >=3",
+    "_openmp_mutex >=4.5",
+    "libsuitesparseconfig >=7.10.1,<8.0a0",
+    "libblas >=3.9.0,<4.0a0",
+    "libumfpack >=6.3.5,<7.0a0"
+  ],
+  "fn": "libparu-1.0.0-h17147ab_7100102.conda",
+  "license": "GPL-3.0-or-later",
+  "md5": "d46f49ad4606c1d2780d5488f1f5ba3f",
+  "name": "libparu",
+  "platform": "linux",
+  "sha256": "f91a6e292c6bec1a95c915faf1a68087fd00428cdec88390b519f8a77e701393",
+  "size": 93219,
+  "subdir": "linux-64",
+  "timestamp": 1742288892000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libparu-1.0.0-h17147ab_7100102.conda",
+  "version": "1.0.0"
+}

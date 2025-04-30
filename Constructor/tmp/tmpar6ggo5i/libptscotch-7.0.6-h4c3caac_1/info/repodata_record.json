@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "h4c3caac_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "mpich >=4.2.3,<5.0a0",
+    "libscotch 7.0.6 hea33c07_1"
+  ],
+  "fn": "libptscotch-7.0.6-h4c3caac_1.conda",
+  "license": "",
+  "md5": "284360b296b64841bf380371f250d052",
+  "name": "libptscotch",
+  "platform": "linux",
+  "sha256": "d64e4affb77a39843dbe0d24c485825405cec09473df32c72d2455cd085f58f3",
+  "size": 180717,
+  "subdir": "linux-64",
+  "timestamp": 1737536978000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libptscotch-7.0.6-h4c3caac_1.conda",
+  "version": "7.0.6"
+}

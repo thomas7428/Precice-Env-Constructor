@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "default_h0d58e46_1001",
+  "build_number": 1001,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "libxml2 >=2.13.4,<2.14.0a0"
+  ],
+  "fn": "libhwloc-2.11.2-default_h0d58e46_1001.conda",
+  "license": "BSD-3-Clause",
+  "md5": "804ca9e91bcaea0824a341d55b1684f2",
+  "name": "libhwloc",
+  "platform": "linux",
+  "sha256": "d14c016482e1409ae1c50109a9ff933460a50940d2682e745ab1c172b5282a69",
+  "size": 2423200,
+  "subdir": "linux-64",
+  "timestamp": 1731374922000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libhwloc-2.11.2-default_h0d58e46_1001.conda",
+  "version": "2.11.2"
+}

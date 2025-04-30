@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h024ca30_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "openmp 20.1.3|20.1.3.*"
+  ],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0"
+  ],
+  "fn": "llvm-openmp-20.1.3-h024ca30_0.conda",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "md5": "c721339ea8746513e42b1233b4bbdfb0",
+  "name": "llvm-openmp",
+  "platform": "linux",
+  "sha256": "4327a463f43b0d95ca0e5f92094383ef53fd2a91d649debfc531b941fe44fd48",
+  "size": 3185408,
+  "subdir": "linux-64",
+  "timestamp": 1744934126000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-20.1.3-h024ca30_0.conda",
+  "version": "20.1.3"
+}

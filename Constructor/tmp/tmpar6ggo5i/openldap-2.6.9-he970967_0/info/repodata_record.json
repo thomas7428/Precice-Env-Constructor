@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "he970967_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "openssl >=3.4.0,<4.0a0",
+    "cyrus-sasl >=2.1.27,<3.0a0",
+    "krb5 >=1.21.3,<1.22.0a0"
+  ],
+  "fn": "openldap-2.6.9-he970967_0.conda",
+  "license": "OLDAP-2.8",
+  "license_family": "BSD",
+  "md5": "ca2de8bbdc871bce41dbf59e51324165",
+  "name": "openldap",
+  "platform": "linux",
+  "sha256": "224f458848f792fe9e3587ee6b626d4eaad63aead0e5e6c25cbe29aba7b05c53",
+  "size": 784483,
+  "subdir": "linux-64",
+  "timestamp": 1732674189000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/openldap-2.6.9-he970967_0.conda",
+  "version": "2.6.9"
+}

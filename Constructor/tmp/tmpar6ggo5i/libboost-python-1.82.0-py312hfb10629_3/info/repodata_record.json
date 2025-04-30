@@ -1,0 +1,28 @@
+{
+  "arch": "x86_64",
+  "build": "py312hfb10629_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64/",
+  "constrains": [
+    "py-boost <0.0a0",
+    "boost 1.82.0*"
+  ],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "numpy >=1.26.0,<2.0a0",
+    "python >=3.12.0rc3,<3.13.0a0",
+    "python_abi 3.12.* *_cp312"
+  ],
+  "fn": "libboost-python-1.82.0-py312hfb10629_3.conda",
+  "license": "BSL-1.0",
+  "md5": "f0375cde459d91cd91aa4a17481c6ffe",
+  "name": "libboost-python",
+  "platform": "linux",
+  "sha256": "833c9b805cbf0db504c166df14518d19db9c461c06dba66dc6f2392b29b3c08b",
+  "size": 120183,
+  "subdir": "linux-64",
+  "timestamp": 1696021079000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libboost-python-1.82.0-py312hfb10629_3.conda",
+  "version": "1.82.0"
+}

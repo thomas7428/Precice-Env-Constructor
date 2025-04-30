@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "h5888daf_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "libnl >=3.11.0,<4.0a0",
+    "libudev1 >=257.4",
+    "libsystemd0 >=257.4"
+  ],
+  "fn": "rdma-core-57.0-h5888daf_0.conda",
+  "license": "Linux-OpenIB",
+  "license_family": "BSD",
+  "md5": "e5be997517f19a365b8b111b888be426",
+  "name": "rdma-core",
+  "platform": "linux",
+  "sha256": "fbb4599ba969c49d2280c84af196c514c49a3ad1529c693f4b6ac6c705998ec8",
+  "size": 1238038,
+  "subdir": "linux-64",
+  "timestamp": 1745325325000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/rdma-core-57.0-h5888daf_0.conda",
+  "version": "57.0"
+}

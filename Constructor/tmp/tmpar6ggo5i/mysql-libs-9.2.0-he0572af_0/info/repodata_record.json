@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "he0572af_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "libzlib >=1.3.1,<2.0a0",
+    "openssl >=3.4.1,<4.0a0",
+    "zstd >=1.5.7,<1.6.0a0",
+    "mysql-common 9.2.0 h266115a_0"
+  ],
+  "fn": "mysql-libs-9.2.0-he0572af_0.conda",
+  "license": "GPL-2.0-or-later",
+  "md5": "93340b072c393d23c4700a1d40565dca",
+  "name": "mysql-libs",
+  "platform": "linux",
+  "sha256": "41cd870c04961591eabe7a43283d2bbc80a382e007f766edb8396ffd2bdfa418",
+  "size": 1371585,
+  "subdir": "linux-64",
+  "timestamp": 1743939293000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/mysql-libs-9.2.0-he0572af_0.conda",
+  "version": "9.2.0"
+}

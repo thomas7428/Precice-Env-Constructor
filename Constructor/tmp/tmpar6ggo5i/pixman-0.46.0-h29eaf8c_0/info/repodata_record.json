@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h29eaf8c_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13"
+  ],
+  "fn": "pixman-0.46.0-h29eaf8c_0.conda",
+  "license": "MIT",
+  "md5": "d2f1c87d4416d1e7344cf92b1aaee1c4",
+  "name": "pixman",
+  "platform": "linux",
+  "sha256": "1330c3fd424fa2deec6a30678f235049c0ed1b0fad8d2d81ef995c9322d5e49a",
+  "size": 398664,
+  "subdir": "linux-64",
+  "timestamp": 1746011575000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/pixman-0.46.0-h29eaf8c_0.conda",
+  "version": "0.46.0"
+}

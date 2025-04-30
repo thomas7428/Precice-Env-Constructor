@@ -1,0 +1,21 @@
+{
+  "arch": "x86_64",
+  "build": "h4852527_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64/",
+  "constrains": [],
+  "depends": [
+    "binutils_impl_linux-64 2.43 h4bf12b8_4"
+  ],
+  "fn": "binutils_linux-64-2.43-h4852527_4.conda",
+  "license": "GPL-3.0-only",
+  "md5": "c87e146f5b685672d4aa6b527c6d3b5e",
+  "name": "binutils_linux-64",
+  "platform": "linux",
+  "sha256": "fe662a038dc14334617940f42ede9ba26d4160771255057cb14fb1a81ee12ac1",
+  "size": 35657,
+  "subdir": "linux-64",
+  "timestamp": 1740155500000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/binutils_linux-64-2.43-h4852527_4.conda",
+  "version": "2.43"
+}

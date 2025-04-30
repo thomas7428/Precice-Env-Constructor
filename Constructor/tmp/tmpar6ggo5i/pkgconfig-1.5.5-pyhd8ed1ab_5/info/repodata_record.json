@@ -1,0 +1,23 @@
+{
+  "build": "pyhd8ed1ab_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "pkg-config",
+    "python >=3.9"
+  ],
+  "fn": "pkgconfig-1.5.5-pyhd8ed1ab_5.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "1168e78fa9d400015d9497a87ac653bf",
+  "name": "pkgconfig",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "0e57ac1dda7ddb6c2064f3ab4a0f8cdc1f285e1b09c61151ffdd698ff9e4469f",
+  "size": 11812,
+  "subdir": "noarch",
+  "timestamp": 1733230819000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pkgconfig-1.5.5-pyhd8ed1ab_5.conda",
+  "version": "1.5.5"
+}

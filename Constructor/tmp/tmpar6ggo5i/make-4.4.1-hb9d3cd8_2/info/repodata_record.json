@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "hb9d3cd8_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13"
+  ],
+  "fn": "make-4.4.1-hb9d3cd8_2.conda",
+  "license": "GPL-3.0-or-later",
+  "md5": "33405d2a66b1411db9f7242c8b97c9e7",
+  "name": "make",
+  "platform": "linux",
+  "sha256": "d652c7bd4d3b6f82b0f6d063b0d8df6f54cc47531092d7ff008e780f3261bdda",
+  "size": 513088,
+  "subdir": "linux-64",
+  "timestamp": 1727801714000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/make-4.4.1-hb9d3cd8_2.conda",
+  "version": "4.4.1"
+}

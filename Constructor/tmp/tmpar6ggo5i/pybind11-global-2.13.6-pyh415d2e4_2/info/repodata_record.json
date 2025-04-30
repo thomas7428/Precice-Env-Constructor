@@ -1,0 +1,25 @@
+{
+  "build": "pyh415d2e4_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "pybind11-abi 4"
+  ],
+  "depends": [
+    "__unix",
+    "python"
+  ],
+  "fn": "pybind11-global-2.13.6-pyh415d2e4_2.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "120541563e520d12d8e39abd7de9092c",
+  "name": "pybind11-global",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "9ff0d61d86878f81779bdb7e47656a75feaab539893462cff29b8ec353026d81",
+  "size": 179139,
+  "subdir": "noarch",
+  "timestamp": 1730237481000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pybind11-global-2.13.6-pyh415d2e4_2.conda",
+  "version": "2.13.6"
+}

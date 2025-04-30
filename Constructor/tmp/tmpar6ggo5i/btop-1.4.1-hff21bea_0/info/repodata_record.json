@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "hff21bea_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13"
+  ],
+  "fn": "btop-1.4.1-hff21bea_0.conda",
+  "license": "Apache-2.0",
+  "md5": "0260e1e0259ffc07d12b1c9a23b40f4c",
+  "name": "btop",
+  "platform": "linux",
+  "sha256": "6e6679b620e48f4c6616244f081427ef6f4547fe833ce236072d5204976e43d9",
+  "size": 598794,
+  "subdir": "linux-64",
+  "timestamp": 1745774320000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/btop-1.4.1-hff21bea_0.conda",
+  "version": "1.4.1"
+}

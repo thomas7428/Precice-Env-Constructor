@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "h00ab1b0_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12"
+  ],
+  "fn": "eigen-3.4.0-h00ab1b0_0.conda",
+  "license": "MPL-2.0",
+  "md5": "b1b879d6d093f55dd40d58b5eb2f0699",
+  "name": "eigen",
+  "platform": "linux",
+  "sha256": "53b15a98aadbe0704479bacaf7a5618fcb32d1577be320630674574241639b34",
+  "size": 1088433,
+  "subdir": "linux-64",
+  "timestamp": 1690272126000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/eigen-3.4.0-h00ab1b0_0.conda",
+  "version": "3.4.0"
+}

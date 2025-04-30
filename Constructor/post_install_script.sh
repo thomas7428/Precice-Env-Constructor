@@ -2,21 +2,29 @@
 mkdir ~/src/
 
 # Modify MPI comportement for memory constraints
-grep -qxF 'setenv UCX_TLS shm,self' ~/.cshrc || echo 'setenv UCX_TLS shm,self' >> ~/.cshrc
-# Add the OpenFOAM environment variables
-grep -qxF 'setenv WM_PROJECT_DIR $CONDA_PREFIX' ~/.cshrc || echo 'setenv WM_PROJECT_DIR $CONDA_PREFIX' >> ~/.cshrc
-grep -qxF 'setenv FOAM_SRC $CONDA_PREFIX' ~/.cshrc || echo 'setenv FOAM_SRC $CONDA_PREFIX' >> ~/.cshrc
-grep -qxF 'setenv FOAM_APPBIN $CONDA_PREFIX/bin' ~/.cshrc || echo 'setenv FOAM_APPBIN $CONDA_PREFIX/bin' >> ~/.cshrc
-grep -qxF 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib' ~/.cshrc || echo 'setenv FOAM_LIBBIN $CONDA_PREFIX/lib' >> ~/.cshrc
+export UCX_TLS=shm,self
 
-# Add the cshrc file of OpenFOAM
-grep -qxF 'source $CONDA_PREFIX/etc/cshrc' ~/.cshrc || echo 'source $CONDA_PREFIX/etc/cshrc' >> ~/.cshrc
+# OpenFOAM v2412 installation via conda
+export WM_PROJECT=OpenFOAM
+export WM_PROJECT_VERSION=2412
+export WM_PROJECT_DIR=$CONDA_PREFIX
+export FOAM_INST_DIR=$CONDA_PREFIX
+export FOAM_RUN=$HOME/OpenFOAM/$USER-$WM_PROJECT_VERSION/run
+export FOAM_USER_APPBIN=$WM_PROJECT_DIR/platforms/linux64GccDPInt32Opt/bin
+export FOAM_SRC=$WM_PROJECT_DIR/src
 
-# Add the number of cores to use
-grep -qxF 'setenv OMP_NUM_THREADS `nproc`' ~/.cshrc || echo 'setenv OMP_NUM_THREADS `nproc`' >> ~/.cshrc
-grep -qxf 'setenv WM_NCOMPPROCS `nproc`' ~/.cshrc || echo 'setenv WM_NCOMPPROCS `nproc`' >> ~/.cshrc
-# Reload the shell
-source ~/.cshrc
+# preCICE settings
+export PRECICE_CFLAGS="$(precice-config --cflags)"
+export PRECICE_LIBS="$(precice-config --libs)"
+
+# Build-related settings
+export WM_NCOMPPROCS=$(nproc)
+export OMP_NUM_THREADS=1
+
+# Add OpenFOAM & preCICE binaries to PATH
+export PATH=$CONDA_PREFIX/bin:$PATH
+
+echo "[OK] Environment set for OpenFOAM v$WM_PROJECT_VERSION and preCICE"
 
 #Installing dolfinx adapter 
 #cd ~/src/
@@ -82,6 +90,7 @@ bash ./Allwmake -j
 
 #Pause to check if the installation was successful
 read -p "Press any key to continue... " -n1 -s
+
 
 #Installing Calculix adapter
 cd ~/Precice-Env-Constructor/Constructor/

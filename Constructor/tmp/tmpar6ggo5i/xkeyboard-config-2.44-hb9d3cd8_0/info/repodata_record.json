@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "hb9d3cd8_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "xorg-libx11 >=1.8.12,<2.0a0"
+  ],
+  "fn": "xkeyboard-config-2.44-hb9d3cd8_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "7c91bfc90672888259675ad2ad28af9c",
+  "name": "xkeyboard-config",
+  "platform": "linux",
+  "sha256": "83ad2be5eb1d359b4cd7d7a93a6b25cdbfdce9d27b37508e2a4efe90d3a4ed80",
+  "size": 392870,
+  "subdir": "linux-64",
+  "timestamp": 1745806998000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/xkeyboard-config-2.44-hb9d3cd8_0.conda",
+  "version": "2.44"
+}

@@ -1,0 +1,27 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "fenics",
+    "mpi4py",
+    "numpy >=1.13.3",
+    "pyprecice >=2.0.0",
+    "python >=3.9",
+    "scipy"
+  ],
+  "fn": "fenicsprecice-2.2.0-pyhd8ed1ab_1.conda",
+  "license": "LGPL-3.0-or-later",
+  "license_family": "GPL",
+  "md5": "9adf1bf683ffa2fcd40104754f037c23",
+  "name": "fenicsprecice",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "a3119aa0b60fe9715b2aa8e577425f5525b6fcd8d9137e56ddf7d690fbc33132",
+  "size": 27239,
+  "subdir": "noarch",
+  "timestamp": 1735765832000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/fenicsprecice-2.2.0-pyhd8ed1ab_1.conda",
+  "version": "2.2.0"
+}

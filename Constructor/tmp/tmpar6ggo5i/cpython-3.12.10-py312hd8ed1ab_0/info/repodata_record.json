@@ -1,0 +1,22 @@
+{
+  "build": "py312hd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0",
+    "python_abi * *_cp312"
+  ],
+  "fn": "cpython-3.12.10-py312hd8ed1ab_0.conda",
+  "license": "Python-2.0",
+  "md5": "7584a4b1e802afa25c89c0dcc72d0826",
+  "name": "cpython",
+  "noarch": "generic",
+  "package_type": "noarch_generic",
+  "sha256": "acb47715abf1cd8177a5c20f42a34555b5d9cebb68ff39a58706e84effe218e2",
+  "size": 45861,
+  "subdir": "noarch",
+  "timestamp": 1744323195000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/cpython-3.12.10-py312hd8ed1ab_0.conda",
+  "version": "3.12.10"
+}
