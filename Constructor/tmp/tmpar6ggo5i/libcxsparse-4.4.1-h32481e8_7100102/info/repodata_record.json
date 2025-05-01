@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h32481e8_7100102",
+  "build_number": 7100102,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "libgcc >=13",
+    "__glibc >=2.17,<3.0.a0",
+    "_x86_64-microarch-level >=3",
+    "_openmp_mutex >=4.5",
+    "libsuitesparseconfig >=7.10.1,<8.0a0"
+  ],
+  "fn": "libcxsparse-4.4.1-h32481e8_7100102.conda",
+  "license": "LGPL-2.1-or-later",
+  "md5": "593cc2ed69765de8ad1cb402322e8a44",
+  "name": "libcxsparse",
+  "platform": "linux",
+  "sha256": "5d3e470c2041b4aa5c2702b8ae692dd4ff402a3568840293052864a4afd2ee4f",
+  "size": 120587,
+  "subdir": "linux-64",
+  "timestamp": 1742288892000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libcxsparse-4.4.1-h32481e8_7100102.conda",
+  "version": "4.4.1"
+}

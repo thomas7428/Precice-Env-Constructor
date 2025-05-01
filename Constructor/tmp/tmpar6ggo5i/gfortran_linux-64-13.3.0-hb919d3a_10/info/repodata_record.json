@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "hb919d3a_10",
+  "build_number": 10,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "binutils_linux-64",
+    "gcc_linux-64 13.3.0 hc28eda2_10",
+    "gfortran_impl_linux-64 13.3.0.*",
+    "sysroot_linux-64"
+  ],
+  "fn": "gfortran_linux-64-13.3.0-hb919d3a_10.conda",
+  "license": "BSD-3-Clause",
+  "md5": "7ce070e3329cd10bf79dbed562a21bd4",
+  "name": "gfortran_linux-64",
+  "platform": "linux",
+  "sha256": "e94192917326a726046e9e83f72d091e550224e7908af82dff2498f98886ebb6",
+  "size": 30847,
+  "subdir": "linux-64",
+  "timestamp": 1745040792000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/gfortran_linux-64-13.3.0-hb919d3a_10.conda",
+  "version": "13.3.0"
+}

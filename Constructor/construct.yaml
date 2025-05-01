@@ -24,9 +24,9 @@ specs:
   - boost    # Boost libraries
   - pyprecice        # pyprecice package
   - fenics-dolfin  # FEniCS DOLFIN    
-  #- mshr # FEniCS mshr
+  - mshr # FEniCS mshr
   - fenicsprecice  # FEniCS-precice interface
-  - openfoam     # OpenFOAM
+  - mpi4py
   - paraview
   - ccx2paraview
   - compilers # Compilers
@@ -41,6 +41,10 @@ specs:
   - gmsh
   - python-gmsh
   - btop # For easy monitoring
+  - openmpi # OpenMPI
+  - m4
+  - flex
+  - sed
 
 # Virtual specifications (for architecture, specific versions, etc.)
 virtual_specs:
@@ -50,4 +54,4 @@ virtual_specs:
 
 installer_filename: "precice_env_installer.sh"
 
-#post_install: post_install_script.sh  # Post-installation script to run after environment creation
+#post_install: post_install_script.csh  # Post-installation script to run after environment creation

@@ -1,0 +1,33 @@
+{
+  "arch": "x86_64",
+  "build": "py312h80c1187_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "python_abi 3.12.* *_cp312",
+    "python >=3.12,<3.13.0a0",
+    "libzlib >=1.3.1,<2.0a0",
+    "libjpeg-turbo >=3.0.0,<4.0a0",
+    "freetype >=2.12.1,<3.0a0",
+    "libtiff >=4.7.0,<4.8.0a0",
+    "tk >=8.6.13,<8.7.0a0",
+    "libxcb >=1.17.0,<2.0a0",
+    "libwebp-base >=1.5.0,<2.0a0",
+    "lcms2 >=2.16,<3.0a0",
+    "openjpeg >=2.5.3,<3.0a0"
+  ],
+  "fn": "pillow-11.1.0-py312h80c1187_0.conda",
+  "license": "HPND",
+  "md5": "d3894405f05b2c0f351d5de3ae26fa9c",
+  "name": "pillow",
+  "platform": "linux",
+  "sha256": "5c347962202b55ae4d8a463e0555c5c6ca33396266a08284bf1384399894e541",
+  "size": 42749785,
+  "subdir": "linux-64",
+  "timestamp": 1735929845000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/pillow-11.1.0-py312h80c1187_0.conda",
+  "version": "11.1.0"
+}

@@ -1,0 +1,29 @@
+{
+  "arch": "x86_64",
+  "build": "h0054346_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "proj4 999999999999"
+  ],
+  "depends": [
+    "sqlite",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "libtiff >=4.7.0,<4.8.0a0",
+    "libsqlite >=3.49.1,<4.0a0",
+    "libcurl >=8.13.0,<9.0a0"
+  ],
+  "fn": "proj-9.6.0-h0054346_1.conda",
+  "license": "MIT",
+  "md5": "a3547a9c204da804d8ef9c40c7ac0b84",
+  "name": "proj",
+  "platform": "linux",
+  "sha256": "ca632e5d8d49f3cca1259097400862e9baf9f46bb999c8cbbab3b47e828376eb",
+  "size": 3197262,
+  "subdir": "linux-64",
+  "timestamp": 1743652160000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/proj-9.6.0-h0054346_1.conda",
+  "version": "9.6.0"
+}

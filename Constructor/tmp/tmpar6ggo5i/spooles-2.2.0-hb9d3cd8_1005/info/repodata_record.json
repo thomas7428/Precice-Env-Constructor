@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "hb9d3cd8_1005",
+  "build_number": 1005,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13"
+  ],
+  "fn": "spooles-2.2.0-hb9d3cd8_1005.conda",
+  "license": "Public Domain",
+  "license_family": "Public Domain",
+  "md5": "b7f16000294bfe764997c940f81d2632",
+  "name": "spooles",
+  "platform": "linux",
+  "sha256": "ea0ae9081611e6e321b655cdcf002aa493d37e9559fa861ec34f57b5bd2253ab",
+  "size": 548623,
+  "subdir": "linux-64",
+  "timestamp": 1731365204000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/spooles-2.2.0-hb9d3cd8_1005.conda",
+  "version": "2.2.0"
+}

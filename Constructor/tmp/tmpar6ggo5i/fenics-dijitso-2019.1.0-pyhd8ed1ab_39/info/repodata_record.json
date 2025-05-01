@@ -1,0 +1,23 @@
+{
+  "build": "pyhd8ed1ab_39",
+  "build_number": 39,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "numpy",
+    "python >=3.7",
+    "setuptools"
+  ],
+  "fn": "fenics-dijitso-2019.1.0-pyhd8ed1ab_39.conda",
+  "license": "LGPL-3.0-or-later",
+  "md5": "e59eb14484180324424d27403fb77cbf",
+  "name": "fenics-dijitso",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "918cc84f05f473dfc5f79c10d9014698859c05c13498143959478a05bfba00b0",
+  "size": 42449,
+  "subdir": "noarch",
+  "timestamp": 1700660162000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-dijitso-2019.1.0-pyhd8ed1ab_39.conda",
+  "version": "2019.1.0"
+}

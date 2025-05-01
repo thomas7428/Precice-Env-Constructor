@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h90cbb55_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "gmp >=6.3.0,<7.0a0"
+  ],
+  "fn": "mpfr-4.2.1-h90cbb55_3.conda",
+  "license": "LGPL-3.0-only",
+  "md5": "2eeb50cab6652538eee8fc0bc3340c81",
+  "name": "mpfr",
+  "platform": "linux",
+  "sha256": "f25d2474dd557ca66c6231c8f5ace5af312efde1ba8290a6ea5e1732a4e669c0",
+  "size": 634751,
+  "subdir": "linux-64",
+  "timestamp": 1725746740000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/mpfr-4.2.1-h90cbb55_3.conda",
+  "version": "4.2.1"
+}

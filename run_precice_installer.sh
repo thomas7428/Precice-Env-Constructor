@@ -16,8 +16,8 @@ echo "🚀 Launching $FINAL_SCRIPT..."
 echo "✅ $FINAL_SCRIPT executed successfully."
 
 # Permissions for post_install_script.sh
-echo "🔒 Setting permissions for post_install_script.sh..."
-chmod +x "post_install_script.sh"
+echo "🔒 Setting permissions for post_install_script.csh..."
+chmod +x "Constructor/post_install_script.csh"
 echo "✅ Permissions set."
 
 # Inform that they will need to use the post_install_script.sh manually after initialization and activation of the environment
@@ -26,4 +26,4 @@ echo "To do this, use the following command:"
 echo "   source ~/miniconda3/etc/profile.d/conda.csh"
 echo "   conda init"
 echo "   conda activate precice_env"
-echo "   ./post_install_script.sh"
+echo "   ./Constructor/post_install_script.csh"

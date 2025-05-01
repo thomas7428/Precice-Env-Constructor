@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "h9eae976_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libzlib >=1.3.1,<2.0a0",
+    "readline >=8.2,<9.0a0",
+    "ncurses >=6.5,<7.0a0",
+    "libsqlite 3.49.1 hee588c1_2"
+  ],
+  "fn": "sqlite-3.49.1-h9eae976_2.conda",
+  "license": "Unlicense",
+  "md5": "1894a9d3a8c3ffa53f8ca09fcd2fac25",
+  "name": "sqlite",
+  "platform": "linux",
+  "sha256": "85c5b96686a900411ad8bdd424dcc2efb2044f15488bb89e57dff3bfcb74cc65",
+  "size": 859553,
+  "subdir": "linux-64",
+  "timestamp": 1742083683000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/sqlite-3.49.1-h9eae976_2.conda",
+  "version": "3.49.1"
+}

@@ -1,0 +1,21 @@
+{
+  "arch": "x86_64",
+  "build": "h767d61c_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0"
+  ],
+  "fn": "libgomp-14.2.0-h767d61c_2.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "06d02030237f4d5b3d9a7e7d348fe3c6",
+  "name": "libgomp",
+  "platform": "linux",
+  "sha256": "1a3130e0b9267e781b89399580f3163632d59fe5b0142900d63052ab1a53490e",
+  "size": 459862,
+  "subdir": "linux-64",
+  "timestamp": 1740240588000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgomp-14.2.0-h767d61c_2.conda",
+  "version": "14.2.0"
+}

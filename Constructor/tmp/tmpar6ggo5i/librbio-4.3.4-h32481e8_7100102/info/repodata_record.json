@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "h32481e8_7100102",
+  "build_number": 7100102,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "_x86_64-microarch-level >=3",
+    "libgcc >=13",
+    "libsuitesparseconfig >=7.10.1,<8.0a0"
+  ],
+  "fn": "librbio-4.3.4-h32481e8_7100102.conda",
+  "license": "GPL-2.0-or-later",
+  "md5": "b573e34f42635a8d6ec932d32cec07b5",
+  "name": "librbio",
+  "platform": "linux",
+  "sha256": "2e4d0e9ee5b39709b65e647975b5cc997b64384f520c52ccd3cff5f85de3f85a",
+  "size": 47617,
+  "subdir": "linux-64",
+  "timestamp": 1742288892000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/librbio-4.3.4-h32481e8_7100102.conda",
+  "version": "4.3.4"
+}

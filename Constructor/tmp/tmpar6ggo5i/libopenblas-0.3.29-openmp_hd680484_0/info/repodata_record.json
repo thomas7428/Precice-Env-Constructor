@@ -1,0 +1,30 @@
+{
+  "arch": "x86_64",
+  "build": "openmp_hd680484_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "openblas >=0.3.29,<0.3.30.0a0"
+  ],
+  "depends": [
+    "libgfortran",
+    "__glibc >=2.17,<3.0.a0",
+    "_openmp_mutex >=4.5",
+    "_openmp_mutex * *_llvm",
+    "llvm-openmp >=19.1.7",
+    "libgcc >=14",
+    "libgfortran5 >=14.2.0"
+  ],
+  "fn": "libopenblas-0.3.29-openmp_hd680484_0.conda",
+  "license": "BSD-3-Clause",
+  "md5": "d2ba36937dad3b4bc9837571a8b3d13b",
+  "name": "libopenblas",
+  "platform": "linux",
+  "sha256": "92355b026aefd1bfe3e139c9c810ab393c6f4ddd1eaf781eb39446d5345c8970",
+  "size": 5923247,
+  "subdir": "linux-64",
+  "timestamp": 1739826141000,
+  "track_features": "openblas_threading_openmp",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libopenblas-0.3.29-openmp_hd680484_0.conda",
+  "version": "0.3.29"
+}

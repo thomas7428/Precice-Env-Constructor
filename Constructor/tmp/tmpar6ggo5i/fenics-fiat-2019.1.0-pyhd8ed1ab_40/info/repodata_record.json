@@ -1,0 +1,24 @@
+{
+  "build": "pyhd8ed1ab_40",
+  "build_number": 40,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "numpy",
+    "python >=3.9",
+    "setuptools",
+    "sympy >=1"
+  ],
+  "fn": "fenics-fiat-2019.1.0-pyhd8ed1ab_40.conda",
+  "license": "LGPL-3.0-or-later",
+  "md5": "944cb426b2be81c056e58bfe72eeb6a7",
+  "name": "fenics-fiat",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "71b5868fdbb79322da36e42044f9ba9b708445ad0f285ed341defbdecd4f37ad",
+  "size": 78104,
+  "subdir": "noarch",
+  "timestamp": 1745999969000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-fiat-2019.1.0-pyhd8ed1ab_40.conda",
+  "version": "2019.1.0"
+}

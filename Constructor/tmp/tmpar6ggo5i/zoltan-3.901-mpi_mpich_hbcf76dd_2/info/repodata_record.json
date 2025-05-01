@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "mpi_mpich_hbcf76dd_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "libgfortran-ng",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libgfortran5 >=12.3.0",
+    "mpich >=4.2.1,<5.0a0",
+    "perl >=5.32.1,<5.33.0a0 *_perl5"
+  ],
+  "fn": "zoltan-3.901-mpi_mpich_hbcf76dd_2.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "247a52af4200046050336ef689c9522e",
+  "name": "zoltan",
+  "platform": "linux",
+  "sha256": "48dedf150cccec4e06f0be8c4eb656a4317783b0b510904970dbcaf3038adb45",
+  "size": 512903,
+  "subdir": "linux-64",
+  "timestamp": 1717417139000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/zoltan-3.901-mpi_mpich_hbcf76dd_2.conda",
+  "version": "3.901"
+}

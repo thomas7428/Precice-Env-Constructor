@@ -1,0 +1,25 @@
+{
+  "build": "pyhd8ed1ab_16",
+  "build_number": 16,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "fenics 2019.1.0"
+  ],
+  "depends": [
+    "numpy",
+    "python >=3.5",
+    "setuptools"
+  ],
+  "fn": "fenics-ufl-2019.1.0-pyhd8ed1ab_16.tar.bz2",
+  "license": "LGPL 3.0",
+  "md5": "d345180688faa6fa90856a75cd5849dd",
+  "name": "fenics-ufl",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "0a18360ab8ced506e9b6d5b62d664b1fe42223971abe74089608a456d6414f38",
+  "size": 172017,
+  "subdir": "noarch",
+  "timestamp": 1608654644000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-ufl-2019.1.0-pyhd8ed1ab_16.tar.bz2",
+  "version": "2019.1.0"
+}

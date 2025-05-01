@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "py312h2614dfc_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "python_abi 3.12.* *_cp312",
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "cython-3.0.12-py312h2614dfc_0.conda",
+  "license": "Apache-2.0",
+  "md5": "e5d2a28866ee990a340bde1eabde587a",
+  "name": "cython",
+  "platform": "linux",
+  "sha256": "de815476da537b911e2ceeb7f76b445d0c76b3d5fad35600ed28bc8d19302127",
+  "size": 3766553,
+  "subdir": "linux-64",
+  "timestamp": 1739228870000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/cython-3.0.12-py312h2614dfc_0.conda",
+  "version": "3.0.12"
+}

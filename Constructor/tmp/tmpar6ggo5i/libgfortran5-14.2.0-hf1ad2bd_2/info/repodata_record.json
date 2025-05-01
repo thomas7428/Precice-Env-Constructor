@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "hf1ad2bd_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [
+    "libgfortran 14.2.0"
+  ],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14.2.0"
+  ],
+  "fn": "libgfortran5-14.2.0-hf1ad2bd_2.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "556a4fdfac7287d349b8f09aba899693",
+  "name": "libgfortran5",
+  "platform": "linux",
+  "sha256": "c17b7cf3073a1f4e1f34d50872934fa326346e104d3c445abc1e62481ad6085c",
+  "size": 1461978,
+  "subdir": "linux-64",
+  "timestamp": 1740240671000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgfortran5-14.2.0-hf1ad2bd_2.conda",
+  "version": "14.2.0"
+}

@@ -1,0 +1,22 @@
+{
+  "build": "pyhd8ed1ab_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "numpy",
+    "python >=3.10"
+  ],
+  "fn": "ccx2paraview-3.1.0-pyhd8ed1ab_2.conda",
+  "license": "GPL-3.0-or-later",
+  "md5": "e98c90d7506c371a7bd2a18efbccf1c2",
+  "name": "ccx2paraview",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "a3cfe50744c4c85117ce0bec87792b7ca654e3e9a8d53223b3995b52113b78f4",
+  "size": 33028,
+  "subdir": "noarch",
+  "timestamp": 1729532241000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/ccx2paraview-3.1.0-pyhd8ed1ab_2.conda",
+  "version": "3.1.0"
+}

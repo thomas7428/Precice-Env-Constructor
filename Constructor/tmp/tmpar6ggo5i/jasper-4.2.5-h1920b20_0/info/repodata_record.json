@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h1920b20_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "freeglut >=3.2.2,<4.0a0",
+    "libgcc >=13",
+    "libglu >=9.0.3,<10.0a0",
+    "libjpeg-turbo >=3.0.0,<4.0a0"
+  ],
+  "fn": "jasper-4.2.5-h1920b20_0.conda",
+  "license": "JasPer-2.0",
+  "md5": "ec8824a45bd7c50a46788fa16216d6c2",
+  "name": "jasper",
+  "platform": "linux",
+  "sha256": "59a4de9d5daee552b901b0edef28a495016fb4a9d35d3b91d69fc9328a6159ee",
+  "size": 688287,
+  "subdir": "linux-64",
+  "timestamp": 1743026000000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/jasper-4.2.5-h1920b20_0.conda",
+  "version": "4.2.5"
+}

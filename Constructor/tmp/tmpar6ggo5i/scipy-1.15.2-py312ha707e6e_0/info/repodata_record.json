@@ -1,0 +1,33 @@
+{
+  "arch": "x86_64",
+  "build": "py312ha707e6e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch/",
+  "constrains": [],
+  "depends": [
+    "libgfortran",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "python_abi 3.12.* *_cp312",
+    "python >=3.12,<3.13.0a0",
+    "libblas >=3.9.0,<4.0a0",
+    "numpy >=1.19,<3",
+    "liblapack >=3.9.0,<4.0a0",
+    "libcblas >=3.9.0,<4.0a0",
+    "libgfortran5 >=13.3.0",
+    "numpy >=1.23.5",
+    "numpy <2.5"
+  ],
+  "fn": "scipy-1.15.2-py312ha707e6e_0.conda",
+  "license": "BSD-3-Clause",
+  "md5": "00b999c5f9d01fb633db819d79186bd4",
+  "name": "scipy",
+  "platform": "linux",
+  "sha256": "b9faaa024b77a3678a988c5a490f02c4029c0d5903998b585100e05bc7d4ff36",
+  "size": 17064784,
+  "subdir": "linux-64",
+  "timestamp": 1739791925000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/scipy-1.15.2-py312ha707e6e_0.conda",
+  "version": "1.15.2"
+}

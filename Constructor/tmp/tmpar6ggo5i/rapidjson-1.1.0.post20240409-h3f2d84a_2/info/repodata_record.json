@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h3f2d84a_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64/",
+  "constrains": [],
+  "depends": [
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "__glibc >=2.17,<3.0.a0"
+  ],
+  "fn": "rapidjson-1.1.0.post20240409-h3f2d84a_2.conda",
+  "license": "MIT",
+  "md5": "65e2f30d532b4ae2063a424c185cc678",
+  "name": "rapidjson",
+  "platform": "linux",
+  "sha256": "f87f265263a1ddbc50b98e2c2bcaa2bac63da3acc09267815dd0f4bd614cd902",
+  "size": 156074,
+  "subdir": "linux-64",
+  "timestamp": 1742820732000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/rapidjson-1.1.0.post20240409-h3f2d84a_2.conda",
+  "version": "1.1.0.post20240409"
+}
