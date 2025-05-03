@@ -62,8 +62,8 @@ mv ~/src/ThirdParty-common-main ~/OpenFOAM/ThirdParty-v2412
 cd ~/OpenFOAM/OpenFOAM-v2412
 # We need to specify the location
 sed -i 's|^set projectDir=.*|set projectDir="$HOME/OpenFOAM/OpenFOAM-$WM_PROJECT_VERSION"|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
-#We also need to specify that we use MPICH
-sed -i 's|^set WM_MPLIB=.*|set WM_MPLIB=MPICH|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
+#We also need to modify setenv WM_MPLIB SYSTEMOPENMPI to setenv WM_MPLIB MPICH
+sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB MPICH|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 
 source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 echo "source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc" >> ~/.cshrc
