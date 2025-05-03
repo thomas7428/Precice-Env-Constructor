@@ -123,17 +123,24 @@ ccx_preCICE --version
 cd ~/src/
 git clone https://github.com/precice/tutorials.git
 
+#Create the virtua python environment for Dolfin
+cd ~/src/
+conda create -n precice_python python=3.13
+setenv PYTHONPATH "$CONDA_PREFIX/lib/python3.13/site-packages"
+conda activate precice_python
+
 #Inform about the .cshrc or .bashrc files to complete
 echo "⚠️ Please remember to add the following lines to your ~/.cshrc file:"
 echo "   setenv UCX_TLS shm,self"
 echo "   setenv WM_NCOMPPROCS `nproc`"
-echo "   setenv CPLUS_INCLUDE_PATH \"\$CONDA_PREFIX/include\""
-echo "   setenv LIBRARY_PATH \"\$CONDA_PREFIX/lib\""
-echo "   export PATH=\"\$CONDA_PREFIX/bin:\$PATH\""
-echo "   export LD_LIBRARY_PATH=\"\$CONDA_PREFIX/lib:\$LD_LIBRARY_PATH\""
+echo "   setenv CPLUS_INCLUDE_PATH '$CONDA_PREFIX/include\'"
+echo "   setenv LIBRARY_PATH '$CONDA_PREFIX/lib\'"
+echo "   export PATH '$CONDA_PREFIX/bin:$PATH\'"
+echo "   export LD_LIBRARY_PATH '$CONDA_PREFIX/lib:$LD_LIBRARY_PATH\'"
 echo "   source ~/OpenFOAM/OpenFOAM-v2412/etc/cshrc"
 echo "   source ~/OpenFOAM/OpenFOAM-v2412/etc/bashrc"
 echo "   source ~/miniconda3/etc/profile.d/conda.csh"
+echo "   setenv PYTHONPATH '$CONDA_PREFIX/lib/python3.13/site-packages'"
 
 # Inform about the tutorials
 echo "⚠️ The tutorials are located in ~/src/tutorials"

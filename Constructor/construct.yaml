@@ -20,7 +20,7 @@ pre_install: pre_install_script.sh  # Pre-installation script to run before envi
 specs:
   #- python # Python
   - mpich  # MPI implementation
-  - pip    # pip package manager
+  #- pip    # pip package manager
   - precice    # precice package from conda-forge
   - boost    # Boost libraries
   - pyprecice        # pyprecice package
