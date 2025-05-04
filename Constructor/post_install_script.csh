@@ -57,13 +57,21 @@ cd ~/Precice-Env-Constructor/Constructor/
 tar xvjf openfoam-OpenFOAM-v2412.tar.bz2 -C ~/src/
 tar xvjf ThirdParty-common-main.tar.bz2 -C ~/src/
 mv ~/src/openfoam-OpenFOAM-v2412 ~/OpenFOAM/OpenFOAM-v2412
-mv ~/src/ThirdParty-common-main ~/OpenFOAM/ThirdParty-v2412
+mv ~/src/ThirdParty-common-v2412 ~/OpenFOAM/ThirdParty-v2412
+
+# Wait a button to check if the installation was successful
+echo "Press any key to continue..."
+set key = $<  # Attendre que l'utilisateur appuie sur une touche
 
 cd ~/OpenFOAM/OpenFOAM-v2412
 # We need to specify the location
 sed -i 's|^set projectDir=.*|set projectDir="$HOME/OpenFOAM/OpenFOAM-$WM_PROJECT_VERSION"|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 #We also need to modify setenv WM_MPLIB SYSTEMOPENMPI to setenv WM_MPLIB MPICH
-sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB MPICH|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
+# sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB MPICH|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
+
+# Wait a button to check if the installation was successful
+echo "Press any key to continue..."
+set key = $<  # Attendre que l'utilisateur appuie sur une touche
 
 source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 echo "source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc" >> ~/.cshrc
