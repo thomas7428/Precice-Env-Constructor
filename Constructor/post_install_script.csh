@@ -10,8 +10,6 @@ if (! -e ~/.cshrc) then
 
 # Modify MPI comportement for memory constraints
 setenv UCX_TLS shm,self
-#Add the following lines to ~/.cshrc if it does not exist
-echo "setenv UCX_TLS shm,self" >> ~/.cshrc
 
 # Build-related settings
 setenv WM_NCOMPPROCS `nproc`
@@ -55,7 +53,7 @@ bash orterun --version
 mkdir ~/OpenFOAM
 cd ~/Precice-Env-Constructor/Constructor/
 tar xvjf openfoam-OpenFOAM-v2412.tar.bz2 -C ~/src/
-tar xvjf ThirdParty-common-main.tar.bz2 -C ~/src/
+tar xvjf ThirdParty-common-v2412.tar.bz2 -C ~/src/
 mv ~/src/openfoam-OpenFOAM-v2412 ~/OpenFOAM/OpenFOAM-v2412
 mv ~/src/ThirdParty-common-v2412 ~/OpenFOAM/ThirdParty-v2412
 
@@ -67,7 +65,17 @@ cd ~/OpenFOAM/OpenFOAM-v2412
 # We need to specify the location
 sed -i 's|^set projectDir=.*|set projectDir="$HOME/OpenFOAM/OpenFOAM-$WM_PROJECT_VERSION"|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 #We also need to modify setenv WM_MPLIB SYSTEMOPENMPI to setenv WM_MPLIB MPICH
-# sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB MPICH|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
+sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB USERMPI|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
+
+
+#Create the prefs.cshrc file
+cat > "$HOME/OpenFOAM/OpenFOAM-v2412/etc/prefs.csh" <<EOF
+# prefs.csh - Configure USERMPI to use the conda installation
+setenv WM_MPLIB USERMPI
+setenv MPI_ARCH_PATH \$CONDA_PREFIX
+setenv PATH "\$MPI_ARCH_PATH/bin:\$PATH"
+setenv LD_LIBRARY_PATH "\$MPI_ARCH_PATH/lib:\$LD_LIBRARY_PATH"
+EOF
 
 # Wait a button to check if the installation was successful
 echo "Press any key to continue..."
@@ -137,16 +145,56 @@ conda create -n precice_python python=3.13
 setenv PYTHONPATH "$CONDA_PREFIX/lib/python3.13/site-packages"
 conda activate precice_python
 
+# Define the user's home directory (replace ~ with /etc for a global .cshrc)
+set USER_HOME = $HOME
+
+# Create the .cshrc file in the user's home directory
+cat > "$USER_HOME/.cshrc" <<EOF
+# .cshrc - Custom configuration for tcsh
+
+# Initialize Conda
+if ( -f \$HOME/miniconda3/etc/profile.d/conda.csh ) then
+    source \$HOME/miniconda3/etc/profile.d/conda.csh
+endif
+
+# Activate the desired Conda environment (precice_env)
+conda init
+conda activate precice_env
+
+# Modify MPI comportement for memory constraints
+setenv UCX_TLS shm,self
+
+# Build-related settings
+setenv WM_NCOMPPROCS `nproc`
+setenv CPLUS_INCLUDE_PATH "$CONDA_PREFIX/include"
+setenv LIBRARY_PATH "$CONDA_PREFIX/lib"
+
+# Set the environment for MPI
+setenv WM_MPLIB USERMPI
+setenv MPI_ARCH_PATH \$CONDA_PREFIX
+setenv PATH "\$MPI_ARCH_PATH/bin:\$PATH"
+setenv LD_LIBRARY_PATH "\$MPI_ARCH_PATH/lib:\$LD_LIBRARY_PATH"
+
+# Add OpenFOAM to the PATH environment variable
+setenv PATH \$HOME/OpenFOAM/OpenFOAM-v2412/platforms/linux64Gcc/bin:\$PATH
+
+# Initialize OpenFOAM after the environment setup
+source \$HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
+
+# Optional: create an alias to quickly source OpenFOAM
+alias foam "source \$HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc"
+
+EOF
+
+echo "✅ The .cshrc file has been created in: $USER_HOME/.cshrc"
+
 #Inform about the .cshrc or .bashrc files to complete
-echo "⚠️ Please remember to add the following lines to your ~/.cshrc file:"
+echo "⚠️ Please remember to verify or add the following lines to your ~/.cshrc file:"
 echo "   setenv UCX_TLS shm,self"
 echo "   setenv WM_NCOMPPROCS `nproc`"
 echo "   setenv CPLUS_INCLUDE_PATH '$CONDA_PREFIX/include\'"
 echo "   setenv LIBRARY_PATH '$CONDA_PREFIX/lib\'"
-echo "   export PATH '$CONDA_PREFIX/bin:$PATH\'"
-echo "   export LD_LIBRARY_PATH '$CONDA_PREFIX/lib:$LD_LIBRARY_PATH\'"
 echo "   source ~/OpenFOAM/OpenFOAM-v2412/etc/cshrc"
-echo "   source ~/OpenFOAM/OpenFOAM-v2412/etc/bashrc"
 echo "   source ~/miniconda3/etc/profile.d/conda.csh"
 echo "   setenv PYTHONPATH '$CONDA_PREFIX/lib/python3.13/site-packages'"
 

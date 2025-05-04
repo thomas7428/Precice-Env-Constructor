@@ -19,8 +19,8 @@ pre_install: pre_install_script.sh  # Pre-installation script to run before envi
 # System dependencies and other general specifications
 specs:
   #- python # Python
-  - openmpi  # OpenMPI implementation
-  #- mpich  # MPI implementation
+  #- openmpi  # OpenMPI implementation
+  - mpich  # MPI implementation
   #- pip    # pip package manager
   - precice    # precice package from conda-forge
   - boost    # Boost libraries
