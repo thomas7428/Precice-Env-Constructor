@@ -15,6 +15,7 @@ setenv UCX_TLS shm,self
 setenv WM_NCOMPPROCS `nproc`
 setenv CPLUS_INCLUDE_PATH "$CONDA_PREFIX/include"
 setenv LIBRARY_PATH "$CONDA_PREFIX/lib"
+setenv LD_LIBRARY_PATH "$CONDA_PREFIX/lib"
 
 #Installing dolfinx adapter 
 #cd ~/src/
