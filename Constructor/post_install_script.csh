@@ -3,11 +3,6 @@
 # Script intented to be run after the installation of the package
 mkdir ~/src/
 
-# Verify it ~/.cshrc exists
-if (! -e ~/.cshrc) then
-    echo "Creating ~/.cshrc file..."
-    touch ~/.cshrc
-
 # Modify MPI comportement for memory constraints
 setenv UCX_TLS shm,self
 
@@ -169,6 +164,7 @@ setenv UCX_TLS shm,self
 setenv WM_NCOMPPROCS `nproc`
 setenv CPLUS_INCLUDE_PATH "$CONDA_PREFIX/include"
 setenv LIBRARY_PATH "$CONDA_PREFIX/lib"
+setenv LD_LIBRARY_PATH "$CONDA_PREFIX/lib"
 
 # Set the environment for MPI
 setenv WM_MPLIB USERMPI
