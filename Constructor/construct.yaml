@@ -21,6 +21,9 @@ specs:
   #- python # Python
   #- openmpi  # OpenMPI implementation
   - mpich  # MPI implementation
+  - mpich-mpicc
+  - mpich-mpicxx
+  - mpich-mpifort
   #- pip    # pip package manager
   - precice    # precice package from conda-forge
   - boost    # Boost libraries

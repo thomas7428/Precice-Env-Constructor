@@ -68,6 +68,7 @@ sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB USERMPI|' $HOME/OpenFOA
 cat > "$HOME/OpenFOAM/OpenFOAM-v2412/etc/prefs.csh" <<EOF
 # prefs.csh - Configure USERMPI to use the conda installation
 setenv WM_MPLIB USERMPI
+setenv CONDA_PREFIX ~/miniconda3/envs/precice_env
 setenv MPI_ARCH_PATH \$CONDA_PREFIX
 setenv PATH "\$MPI_ARCH_PATH/bin:\$PATH"
 setenv LD_LIBRARY_PATH "\$MPI_ARCH_PATH/lib:\$LD_LIBRARY_PATH"
@@ -77,6 +78,7 @@ EOF
 echo "Press any key to continue..."
 set key = $<  # Attendre que l'utilisateur appuie sur une touche
 
+source $HOME/OpenFOAM/OpenFOAM-v2412/etc/prefs.csh
 source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 echo "source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc" >> ~/.cshrc
 bash foamSystemCheck
