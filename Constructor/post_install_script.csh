@@ -61,17 +61,37 @@ cd ~/OpenFOAM/OpenFOAM-v2412
 # We need to specify the location
 sed -i 's|^set projectDir=.*|set projectDir="$HOME/OpenFOAM/OpenFOAM-$WM_PROJECT_VERSION"|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 #We also need to modify setenv WM_MPLIB SYSTEMOPENMPI to setenv WM_MPLIB MPICH
-sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB USERMPI|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
+sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB SYSTEMMPI|' $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 
+# Create the prefs.sys-mpi file
+cat > "$HOME/OpenFOAM/OpenFOAM-v2412/etc/config.csh/prefs.sys-mpi" <<EOF
+# $WM_PROJECT_DIR/etc/prefs.d/prefs.sys-mpi
+
+# Point to MPI installed via conda (e.g. mpich or openmpi)
+setenv MPI_ARCH_PATH "$CONDA_PREFIX"
+setenv MPI_ROOT "$MPI_ARCH_PATH"
+setenv FOAM_MPI "mpich-4.2.2"
+
+# Flags for compilation
+setenv MPI_ARCH_FLAGS "-DOMPI_SKIP_MPICXX"
+setenv MPI_ARCH_INC "-isystem $MPI_ROOT/include"
+
+# Flags for linking with mpi and zlib
+setenv MPI_ARCH_LIBS "-L$MPI_ROOT/lib -lmpi -lz"
+EOF
 
 #Create the prefs.cshrc file
 cat > "$HOME/OpenFOAM/OpenFOAM-v2412/etc/prefs.csh" <<EOF
-# prefs.csh - Configure USERMPI to use the conda installation
-setenv WM_MPLIB USERMPI
+# prefs.csh - Configure SYSTEMMPI to use the conda installation
+setenv WM_MPLIB SYSTEMMPI
 setenv CONDA_PREFIX ~/miniconda3/envs/precice_env
 setenv MPI_ARCH_PATH \$CONDA_PREFIX
 setenv PATH "\$MPI_ARCH_PATH/bin:\$PATH"
 setenv LD_LIBRARY_PATH "\$MPI_ARCH_PATH/lib:\$LD_LIBRARY_PATH"
+setenv CPPFLAGS "\$CPPFLAGS -I\$MPI_ARCH_PATH/include"
+setenv CXXFLAGS "\$CXXFLAGS -I\$MPI_ARCH_PATH/include"
+setenv LDFLAGS "\$LDFLAGS -L\$MPI_ARCH_PATH/lib"
+
 EOF
 
 # Wait a button to check if the installation was successful
