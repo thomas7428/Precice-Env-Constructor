@@ -11,6 +11,12 @@ setenv WM_NCOMPPROCS `nproc`
 setenv CPLUS_INCLUDE_PATH "$CONDA_PREFIX/include"
 setenv LIBRARY_PATH "$CONDA_PREFIX/lib"
 setenv LD_LIBRARY_PATH "$CONDA_PREFIX/lib"
+setenv MPI_ARCH_PATH "$CONDA_PREFIX"
+setenv MPI_ROOT "$MPI_ARCH_PATH"
+setenv WM_CC  "$CONDA_PREFIX/bin/cc"
+setenv WM_CXX "$CONDA_PREFIX/bin/c++"
+setenv WM_CFLAGS   ""
+setenv WM_CXXFLAGS ""
 
 #Installing dolfinx adapter 
 #cd ~/src/
@@ -65,7 +71,6 @@ sed -i 's|^setenv WM_MPLIB SYSTEMOPENMPI|setenv WM_MPLIB SYSTEMMPI|' $HOME/OpenF
 
 # Create the prefs.sys-mpi file
 cat > "$HOME/OpenFOAM/OpenFOAM-v2412/etc/config.csh/prefs.sys-mpi" <<EOF
-# $WM_PROJECT_DIR/etc/prefs.d/prefs.sys-mpi
 
 # Point to MPI installed via conda (e.g. mpich or openmpi)
 setenv MPI_ARCH_PATH "$CONDA_PREFIX"
@@ -88,9 +93,9 @@ setenv CONDA_PREFIX ~/miniconda3/envs/precice_env
 setenv MPI_ARCH_PATH \$CONDA_PREFIX
 setenv PATH "\$MPI_ARCH_PATH/bin:\$PATH"
 setenv LD_LIBRARY_PATH "\$MPI_ARCH_PATH/lib:\$LD_LIBRARY_PATH"
-setenv CPPFLAGS "\$CPPFLAGS -I\$MPI_ARCH_PATH/include"
-setenv CXXFLAGS "\$CXXFLAGS -I\$MPI_ARCH_PATH/include"
-setenv LDFLAGS "\$LDFLAGS -L\$MPI_ARCH_PATH/lib"
+setenv CPPFLAGS "-I\$MPI_ARCH_PATH/include"
+setenv CXXFLAGS "-I\$MPI_ARCH_PATH/include"
+setenv LDFLAGS "-L\$MPI_ARCH_PATH/lib"
 
 EOF
 
