@@ -29,14 +29,29 @@ setenv WM_CXXFLAGS ""
 #cd ~/src/fenicsx-adapter/tutorials/partitioned-heat-conduction/dirichlet-fenicsx
 #bash ./run.sh
 
-# Installing dolfin adapter
-#cd ~/src/
-#wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
-#tar -xzf v2.2.0.tar.gz 
-#cd fenics-adapter-2.2.0
-#pip install --no-deps .
-# Test the installation
+#Installing dolfin (https://fenics.readthedocs.io/en/latest/installation.html)
+cd ~/src/
+setenv PYBIND11_VERSION "2.2.3"
+wget -nc --quiet https://github.com/pybind/pybind11/archive/v${PYBIND11_VERSION}.tar.gz
+tar -xf v${PYBIND11_VERSION}.tar.gz && cd pybind11-${PYBIND11_VERSION}
+mkdir build && cd build && cmake -DPYBIND11_TEST=off .. && make install
+pip3 install fenics-ffc --upgrade
+setenv FENICS_VERSION "2019.1.0"
+cd ~/src/
+git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/dolfin
+git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/mshr
+mkdir dolfin/build && cd dolfin/build && cmake .. -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX && make install && cd ../..
+mkdir mshr/build   && cd mshr/build   && cmake .. -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX && make install && cd ../..
+cd dolfin/python && pip3 install . --prefix=$CONDA_PREFIX && cd ../..
+cd mshr/python   && pip3 install . --prefix=$CONDA_PREFIX && cd ../..
 
+# Installing dolfin adapter
+cd ~/src/
+wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
+tar -xzf v2.2.0.tar.gz 
+cd fenics-adapter-2.2.0
+pip install . --prefix=$CONDA_PREFIX 
+# Test the installation
 
 # Installing the mshr module
 #cd ~/src/
@@ -175,6 +190,9 @@ set USER_HOME = $HOME
 cat > "$USER_HOME/.cshrc" <<EOF
 # .cshrc - Custom configuration for tcsh
 
+#Message to indicate that the source began
+echo "Sourcing .cshrc file..."
+
 # Initialize Conda
 if ( -f \$HOME/miniconda3/etc/profile.d/conda.csh ) then
     source \$HOME/miniconda3/etc/profile.d/conda.csh
@@ -198,6 +216,7 @@ setenv WM_MPLIB USERMPI
 setenv MPI_ARCH_PATH \$CONDA_PREFIX
 setenv PATH "\$MPI_ARCH_PATH/bin:\$PATH"
 setenv LD_LIBRARY_PATH "\$MPI_ARCH_PATH/lib:\$LD_LIBRARY_PATH"
+setenv OMP_NUM_THREADS `nproc`
 
 # Add OpenFOAM to the PATH environment variable
 setenv PATH \$HOME/OpenFOAM/OpenFOAM-v2412/platforms/linux64Gcc/bin:\$PATH
@@ -208,6 +227,8 @@ source \$HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 # Optional: create an alias to quickly source OpenFOAM
 alias foam "source \$HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc"
 
+# Message to indicate that the .cshrc file has been sourced
+echo "Sourcing completed !"
 EOF
 
 echo "✅ The .cshrc file has been created in: $USER_HOME/.cshrc"
