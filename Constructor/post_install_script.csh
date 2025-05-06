@@ -108,7 +108,7 @@ source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc
 echo "source $HOME/OpenFOAM/OpenFOAM-v2412/etc/cshrc" >> ~/.cshrc
 bash foamSystemCheck
 bash foam
-bash ./Allwmake -l -j -q
+bash ./Allwmake -l -j -q -k #-j to use all cores ; -k to keep going and compile everything it can ; -q to not show the compilation ; -l to show the compilation log
 bash foamInstallationTest
 bash foamTestTutorial -full incompressible/simpleFoam/pitzDaily
 
@@ -213,9 +213,10 @@ EOF
 echo "✅ The .cshrc file has been created in: $USER_HOME/.cshrc"
 
 #Inform about the .cshrc or .bashrc files to complete
-echo "⚠️ Please remember to verify or add the following lines to your ~/.cshrc file:"
+echo "⚠️ Please remember to verify or add the following lines to your ~/.cshrc file: (specify what you want for nproc if you do not want to use all of your cores)"
 echo "   setenv UCX_TLS shm,self"
 echo "   setenv WM_NCOMPPROCS `nproc`"
+echo "   setenv OMP_NUM_THREADS `nproc`" 
 echo "   setenv CPLUS_INCLUDE_PATH '$CONDA_PREFIX/include\'"
 echo "   setenv LIBRARY_PATH '$CONDA_PREFIX/lib\'"
 echo "   source ~/OpenFOAM/OpenFOAM-v2412/etc/cshrc"
