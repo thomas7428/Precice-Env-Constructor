@@ -139,7 +139,7 @@ if (`grep "cmake_policy(VERSION 3.1)" "$file" | wc -l` == 0) then
     sed -i 's|^cmake_policy(VERSION 3.1)|cmake_policy(VERSION 3.5)|' $file
     echo "--- /!\ Added cmake_policy(VERSION 3.5) to $file"
 endif
-mkdir mshr/build   && cd mshr/build   && cmake .. -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX && make install -j11 && cd ../..
+mkdir mshr/build   && cd mshr/build   && cmake .. -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DBOOST_ROOT=$CONDA_PREFIX && make install -j11 && cd ../..
 
 # Wait a button to check if the installation was successful
 echo "Press any key to continue..."
@@ -344,8 +344,22 @@ EOF
 
 echo "✅ The .cshrc file has been created in: $USER_HOME/.cshrc"
 
+
+#Verify all the installations
+echo "========================== VERIFYING INSTALLATIONS =========================="
+echo "========================== VERIFYING OPENFOAM =========================="
+bash foamSystemCheck
+bash foamInstallationTest
+bash foamTestTutorial -full incompressible/simpleFoam/pitzDaily
+echo "========================== VERIFYING DOLFIN =========================="
+python3 -c "import dolfin; print(dolfin.__version__)"
+echo "========================== VERIFYING DOLFIN ADAPTER =========================="
+python3 -c "import fenics_preCICE; print(fenics_preCICE.__version__)"
+
+
 #Inform about the .cshrc or .bashrc files to complete
 echo "⚠️ Please remember to verify or add the following lines to your ~/.cshrc file: (specify what you want for nproc if you do not want to use all of your cores)"
+echo " A ~/.cshrc file has been created but you need to verify it and source it !"
 echo "   setenv UCX_TLS shm,self"
 echo "   setenv WM_NCOMPPROCS `nproc`"
 echo "   setenv OMP_NUM_THREADS `nproc`" 
