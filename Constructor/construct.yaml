@@ -32,12 +32,14 @@ specs:
   #- mshr # FEniCS mshr
   #- fenicsprecice  # FEniCS-precice interface
   #- mpi4py=4.0.3
+  - eigen  # Eigen library
   - paraview
   - ccx2paraview
   - compilers # Compilers
   - cmake       # CMake
   - make        # Make
-  - git         # Git
+  - pkg-config  # pkg-config
+  - pybind11
   - nano         # Nano text editor
   - spooles
   - yaml-cpp
