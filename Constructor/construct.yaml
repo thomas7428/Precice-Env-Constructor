@@ -28,9 +28,9 @@ specs:
   - precice    # precice package from conda-forge
   - boost    # Boost libraries
   - pyprecice        # pyprecice package
-  #- fenics-dolfin  # FEniCS DOLFIN    
-  #- mshr # FEniCS mshr
-  #- fenicsprecice  # FEniCS-precice interface
+  - fenics-dolfin  # FEniCS DOLFIN    
+  - mshr # FEniCS mshr
+  - fenicsprecice  # FEniCS-precice interface
   #- mpi4py=4.0.3
   - eigen  # Eigen library
   - paraview

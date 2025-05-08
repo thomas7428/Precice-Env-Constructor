@@ -41,18 +41,18 @@ setenv WM_CXXFLAGS ""
 #echo "Press any key to continue..."
 #set key = $<  # Attendre que l'utilisateur appuie sur une touche
 
-cd ~/src/
-echo "========================== MAKING DOLFIN =========================="
+#cd ~/src/
+#echo "========================== MAKING DOLFIN =========================="
 #Adding an adapted version of boost/detail/endian.hpp (v1.72.0) to avoid the error "boost/detail/endian.hpp: No such file or directory"
 #   The last version of boost/detail/endian.hpp pointed to boost/predef/detail/endian_compat.h which also was deleted after 1.72.0
 #   A warning was present explaining that the file was deprecated and that it would be removed in the future :
 #       "The use of BOOST_*_ENDIAN and BOOST_BYTE_ORDER is deprecated. Please include <boost/predef/other/endian.h> and use BOOST_ENDIAN_*_BYTE instead"
 #   We use a personal version of endian.hpp to compensate the missing file and adapt the code to the new version (needed for preCICE)
 
-if (! -d "$CONDA_PREFIX/include/boost/detail") then
-    mkdir -p "$CONDA_PREFIX/include/boost/detail"
-endif
-cat > "$CONDA_PREFIX/include/boost/detail/endian.hpp" <<EOF
+#if (! -d "$CONDA_PREFIX/include/boost/detail") then
+#    mkdir -p "$CONDA_PREFIX/include/boost/detail"
+#endif
+#cat > "$CONDA_PREFIX/include/boost/detail/endian.hpp" <<EOF
 #ifndef BOOST_DETAIL_ENDIAN_HPP
 #define BOOST_DETAIL_ENDIAN_HPP
 
@@ -72,98 +72,98 @@ cat > "$CONDA_PREFIX/include/boost/detail/endian.hpp" <<EOF
 #endif
 
 #endif
-EOF
-setenv FENICS_VERSION "2019.1.0"
-git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/dolfin
-git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/mshr
+#EOF
+#setenv FENICS_VERSION "2019.1.0"
+#git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/dolfin
+#git clone --branch=$FENICS_VERSION https://bitbucket.org/fenics-project/mshr
 
 #You will need to adapt some of Dolfin files
 # Check if the line #include <algorithm> is already present
-setenv file "~/src/dolfin/dolfin/geometry/IntersectionConstruction.cpp"
-if (`grep "#include <algorithm>" "$file" | wc -l` == 0) then
-    sed -i 's|^#include <iomanip>|#include <iomanip>\n#include <algorithm> |' $file
-    echo "--- /!\ Added #include <algorithm> to $file"
-endif
-setenv file "~/src/dolfin/dolfin/mesh/MeshFunction.h"
-if (`grep "#include <algorithm>" "$file" | wc -l` == 0) then
-    sed -i 's|^#include <memory>|#include <memory>\n#include <algorithm> |' $file
-    echo "--- /!\ Added #include <algorithm> to $file"
-endif
+#setenv file "~/src/dolfin/dolfin/geometry/IntersectionConstruction.cpp"
+#if (`grep "#include <algorithm>" "$file" | wc -l` == 0) then
+#    sed -i 's|^#include <iomanip>|#include <iomanip>\n#include <algorithm> |' $file
+#    echo "--- /!\ Added #include <algorithm> to $file"
+#endif
+#setenv file "~/src/dolfin/dolfin/mesh/MeshFunction.h"
+#if (`grep "#include <algorithm>" "$file" | wc -l` == 0) then
+#    sed -i 's|^#include <memory>|#include <memory>\n#include <algorithm> |' $file
+#    echo "--- /!\ Added #include <algorithm> to $file"
+#endif
 #For HDF5 compatibility
-setenv file "~/src/dolfin/dolfin/io/HDF5Interface.cpp"
-if (`grep "#include <boost/filesystem.hpp>" "$file" | wc -l` == 0) then
-    sed -i 's|^#include <boost/filesystem.hpp>|#include <boost/filesystem.hpp>\n#include <H5Opublic.h> |' $file
-    echo "--- /!\ Added #include <H5Opublic.h> to $file"
-endif
+#setenv file "~/src/dolfin/dolfin/io/HDF5Interface.cpp"
+#if (`grep "#include <boost/filesystem.hpp>" "$file" | wc -l` == 0) then
+#    sed -i 's|^#include <boost/filesystem.hpp>|#include <boost/filesystem.hpp>\n#include <H5Opublic.h> |' $file
+#    echo "--- /!\ Added #include <H5Opublic.h> to $file"
+#endif
 #if (`grep "H5O_info_t object_info;" "$file" | wc -l` == 0) then
 #    sed -i 's|^H5O_info_t object_info;|H5O_info2_t object_info;|' $file
 #    echo "--- /!\ Replaced H5O_info_t with H5O_info2_t in $file"
 #endif
 
-sed -i '/H5Oget_info_by_name/s/H5Oget_info_by_name/H5Oget_info_by_name3/' $file
-sed -i '/H5Oget_info_by_name3/s|(\(.*\), \(.*\), \(.*\),|\(\1, \2, \3, H5O_INFO_BASIC,|' $file
+#sed -i '/H5Oget_info_by_name/s/H5Oget_info_by_name/H5Oget_info_by_name3/' $file
+#sed -i '/H5Oget_info_by_name3/s|(\(.*\), \(.*\), \(.*\),|\(\1, \2, \3, H5O_INFO_BASIC,|' $file
 #sed -i 's|^H5Oget_info_by_name(hdf5_file_handle, group_name.c_str(), &object_info,|H5Oget_info_by_name3(hdf5_file_handle, group_name.c_str(), &object_info, H5O_INFO_BASIC,|' $file
-echo "--- /!\ Replaced H5Oget_info_by_name with H5Oget_info_by_name3 in $file"
+#echo "--- /!\ Replaced H5Oget_info_by_name with H5Oget_info_by_name3 in $file"
 # We also need to work on PETSc compatibility
-setenv file "~/src/dolfin/dolfin/la/PETScVector.cpp"
-if (`grep "#include <petscvec.h>" "$file" | wc -l` == 0) then
-    sed -i 's|^#include <cmath>|#include <cmath>\n#include <petscvec.h> |' $file
-    echo "--- /!\ Added #include <petscvec.h> to $file"
-endif
-sed -i '/#if PETSC_VERSION_GE(3,11,0)/,/^#else/ {d}' $file
-sed -i '/#endif \/\/ PETSC_VERSION_GE(3,11,0)/d' $file
-sed -i 's/VecScatterCreateWithData/VecScatterCreate/' $file
-sed -i '/Perform scatter/a\
-  VecScatter scatter;\
-  ierr = VecScatterCreate(_x, from, _y.vec(), to, &scatter);\
-  CHECK_ERROR("VecScatterCreate");\
-  ierr = VecScatterBegin(scatter, _x, _y.vec(), INSERT_VALUES, SCATTER_FORWARD);\
-  CHECK_ERROR("VecScatterBegin");' $file
-echo "--- /!\ Replaced VecScatterCreateWithData with VecScatterCreate in $file"
-sed -i '954d' $file
+#setenv file "~/src/dolfin/dolfin/la/PETScVector.cpp"
+#if (`grep "#include <petscvec.h>" "$file" | wc -l` == 0) then
+#    sed -i 's|^#include <cmath>|#include <cmath>\n#include <petscvec.h> |' $file
+#    echo "--- /!\ Added #include <petscvec.h> to $file"
+#endif
+#sed -i '/#if PETSC_VERSION_GE(3,11,0)/,/^#else/ {d}' $file
+#sed -i '/#endif \/\/ PETSC_VERSION_GE(3,11,0)/d' $file
+#sed -i 's/VecScatterCreateWithData/VecScatterCreate/' $file
+#sed -i '/Perform scatter/a\
+#  VecScatter scatter;\
+#  ierr = VecScatterCreate(_x, from, _y.vec(), to, &scatter);\
+#  CHECK_ERROR("VecScatterCreate");\
+#  ierr = VecScatterBegin(scatter, _x, _y.vec(), INSERT_VALUES, SCATTER_FORWARD);\
+#  CHECK_ERROR("VecScatterBegin");' $file
+#echo "--- /!\ Replaced VecScatterCreateWithData with VecScatterCreate in $file"
+#sed -i '954d' $file
 
 
-pip uninstall sympy -y
-pip install sympy==1.5.1 # Downgrade sympy to 1.5.1 for compatiblity issue (Dolfin is really old)
-pip3 install fenics-ffc --upgrade
-mkdir dolfin/build && cd dolfin/build && cmake .. -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_POLICY_VERSION_MINIMUM=3.5 && make install -j11 && cd ../..
+#pip uninstall sympy -y
+#pip install sympy==1.5.1 # Downgrade sympy to 1.5.1 for compatiblity issue (Dolfin is really old)
+#pip3 install fenics-ffc --upgrade
+#mkdir dolfin/build && cd dolfin/build && cmake .. -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_POLICY_VERSION_MINIMUM=3.5 && make install -j11 && cd ../..
 
-echo "========================== MAKING MSRH =========================="
+#echo "========================== MAKING MSRH =========================="
 #We need to specify for CGAL a new minimum for the CMake policy (it is an old version 3.1)
-setenv file "~/src/mshr/3rdparty/CGAL/CMakeLists.txt"
-if (`grep "cmake_minimum_required(VERSION 3.1)" "$file" | wc -l` == 0) then
-    sed -i 's|^cmake_minimum_required(VERSION 3.1)|cmake_minimum_required(VERSION 3.5)|' $file
-    echo "--- /!\ Added cmake_minimum_required(VERSION 3.5) to $file"
-endif
-if (`grep "cmake_policy(VERSION 3.1)" "$file" | wc -l` == 0) then
-    sed -i 's|^cmake_policy(VERSION 3.1)|cmake_policy(VERSION 3.5)|' $file
-    echo "--- /!\ Added cmake_policy(VERSION 3.5) to $file"
-endif
-mkdir mshr/build   && cd mshr/build   && cmake .. -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DBOOST_ROOT=$CONDA_PREFIX && make install -j11 && cd ../..
+#setenv file "~/src/mshr/3rdparty/CGAL/CMakeLists.txt"
+#if (`grep "cmake_minimum_required(VERSION 3.1)" "$file" | wc -l` == 0) then
+#    sed -i 's|^cmake_minimum_required(VERSION 3.1)|cmake_minimum_required(VERSION 3.5)|' $file
+#    echo "--- /!\ Added cmake_minimum_required(VERSION 3.5) to $file"
+#endif
+#if (`grep "cmake_policy(VERSION 3.1)" "$file" | wc -l` == 0) then
+#    sed -i 's|^cmake_policy(VERSION 3.1)|cmake_policy(VERSION 3.5)|' $file
+#    echo "--- /!\ Added cmake_policy(VERSION 3.5) to $file"
+#endif
+#mkdir mshr/build   && cd mshr/build   && cmake .. -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DBOOST_ROOT=$CONDA_PREFIX && make install -j11 && cd ../..
 
 # Wait a button to check if the installation was successful
-echo "Press any key to continue..."
-set key = $<  # Attendre que l'utilisateur appuie sur une touche
+#echo "Press any key to continue..."
+#set key = $<  # Attendre que l'utilisateur appuie sur une touche
 
-echo "========================== INSTALLING PYTHON MODULES =========================="
-cd dolfin/python && pip3 install . --prefix=$CONDA_PREFIX && cd ../..
-cd mshr/python   && pip3 install . --prefix=$CONDA_PREFIX && cd ../..
+#echo "========================== INSTALLING PYTHON MODULES =========================="
+#cd dolfin/python && pip3 install . --prefix=$CONDA_PREFIX && cd ../..
+#cd mshr/python   && pip3 install . --prefix=$CONDA_PREFIX && cd ../..
 
 # Wait a button to check if the installation was successful
-echo "Press any key to continue..."
-set key = $<  # Attendre que l'utilisateur appuie sur une touche
+#echo "Press any key to continue..."
+#set key = $<  # Attendre que l'utilisateur appuie sur une touche
 
 # Installing dolfin adapter
-cd ~/src/
-echo "========================== INSTALLING DOLFIN ADAPTER =========================="
-wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
-tar -xzf v2.2.0.tar.gz 
-cd fenics-adapter-2.2.0
-pip install . --prefix=$CONDA_PREFIX 
+#cd ~/src/
+#echo "========================== INSTALLING DOLFIN ADAPTER =========================="
+#wget https://github.com/precice/fenics-adapter/archive/refs/tags/v2.2.0.tar.gz
+#tar -xzf v2.2.0.tar.gz 
+#cd fenics-adapter-2.2.0
+#pip install . --prefix=$CONDA_PREFIX 
 
 # Wait a button to check if the installation was successful
-echo "Press any key to continue..."
-set key = $<  # Attendre que l'utilisateur appuie sur une touche
+#echo "Press any key to continue..."
+#set key = $<  # Attendre que l'utilisateur appuie sur une touche
 
 
 # Installing the mshr module
