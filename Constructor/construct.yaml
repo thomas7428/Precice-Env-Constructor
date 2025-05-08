@@ -28,6 +28,7 @@ specs:
   - precice    # precice package from conda-forge
   - boost    # Boost libraries
   - pyprecice        # pyprecice package
+  - fenics-dolfinx
   #- fenics-dolfin  # FEniCS DOLFIN    
   #- mshr # FEniCS mshr
   #- fenicsprecice  # FEniCS-precice interface
