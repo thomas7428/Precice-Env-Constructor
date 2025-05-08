@@ -31,7 +31,7 @@ specs:
   - fenics-dolfin  # FEniCS DOLFIN    
   - mshr # FEniCS mshr
   - fenicsprecice  # FEniCS-precice interface
-  #- mpi4py=4.0.3
+  - mpi4py=4.0.3
   - eigen  # Eigen library
   - paraview
   - ccx2paraview
