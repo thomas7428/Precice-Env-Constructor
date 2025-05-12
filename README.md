@@ -6,6 +6,8 @@ The **Precice Environment Constructor** is a tool designed to simplify the setup
 
 The source code for **CalculiX 2.20** is included in this repository. This is due to internet access restrictions from the official site and the unavailability of repositories hosting the 2.20 version of **CalculiX**. Please ensure compliance with the licensing terms of **CalculiX** when using or distributing this code.
 
+THe source code of **OpenFOAM v2412** is also included for the same reason of internet access restriction. Please ensure compliance with the licensing terms of **OpenFOAM** when using or distributing this code.
+
 ## Features
 
 - Preconfigured setup for **preCICE** and its adapters.
@@ -26,7 +28,7 @@ Before using this tool, ensure you have the following installed:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/Precice-Env-Constructor.git
+    git clone https://github.com/thomas7428/Precice-Env-Constructor.git
     cd Precice-Env-Constructor
     ```
 
@@ -53,7 +55,7 @@ To create your own custom construct, follow these steps:
     ```
 
 3. Distribute the installer:
-    - The generated installer will be located in the `constructor` directory. It will be cut in 90MB files.
+    - The generated installer will be located in the `Constructor` directory. It will be cut in 90MB files.
     - Share the installer and the `run_precice_installer` with your team or use it for deployment.
 
 For more details on customizing the `construct.yaml` file, refer to the [constructor documentation](https://docs.conda.io/projects/constructor/en/latest/).
